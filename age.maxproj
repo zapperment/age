@@ -2,7 +2,7 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3834895363,
+	"modificationdate" : 3834896033,
 	"viewrect" : [ 255.0, 199.0, 462.0, 662.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -120,7 +120,7 @@
 
 	}
 ,
-	"detailsvisible" : 0,
+	"detailsvisible" : 1,
 	"amxdtype" : 0,
 	"readonly" : 0,
 	"devpathtype" : 0,
