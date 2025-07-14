@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3834896033,
-	"viewrect" : [ 255.0, 199.0, 462.0, 662.0 ],
+	"modificationdate" : 3835349846,
+	"viewrect" : [ 293.0, 518.0, 462.0, 662.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -27,7 +27,17 @@
 				"local" : 1
 			}
 ,
+			"reasonRack.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"simPadController.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"experimentalVst.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -80,7 +90,27 @@
 				"local" : 1
 			}
 ,
+			"VstManager.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"PadPatcherSender.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"determineRackDevice.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"getRackDeviceName.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"rackDevices.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
