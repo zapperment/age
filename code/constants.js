@@ -55,4 +55,14 @@ module.exports = {
     vendor: "Unknown",
     type: "Unknown",
   },
+  paramType: {
+    boolean: "boolean",
+    control: "control",
+    switch: "switch",
+    bipolar: "bipolar",
+    unipolar: "unipolar",
+    enabled: "enabled",
+    play: "play",
+    pattern: "pattern",
+  },
 };

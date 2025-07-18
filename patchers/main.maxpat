@@ -55,7 +55,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 565.0, 87.0, 1652.0, 1319.0 ],
+						"rect" : [ 1459.0, 98.0, 1652.0, 1319.0 ],
 						"gridsize" : [ 10.0, 10.0 ],
 						"subpatcher_template" : "zapperment",
 						"integercoordinates" : 1,
@@ -277,7 +277,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "this.inlets = 1;\r\nthis.outlets = 16;\r\n\r\nfunction msg_int(v) {\r\n\tfor (let i = 0; i < 16; i++) {\r\n\t\toutlet(i, v === i ? 1 : 0);\r\n\t}\r\n}\r\n\r\nfunction bang() {\r\n\t\tfor (let i = 0; i < 16; i++) {\r\n\t\toutlet(i, 0);\r\n\t}\r\n}",
+									"code" : "this.inlets = 1;\r\nthis.outlets = 16;\r\n\r\nfunction msg_int(v) {\r\n\tfor (let i = 0; i < 16; i++) {\r\n\t\toutlet(i, v === i ? 1 : 0);\r\n\t}\r\n}\r\n\r\nfunction bang() {\r\n\tfor (let i = 0; i < 16; i++) {\r\n\t\toutlet(i, 0);\r\n\t}\r\n}",
 									"filename" : "none",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
@@ -2357,7 +2357,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1658.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1"
+					"text" : "20"
 				}
 
 			}
@@ -2382,7 +2382,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1690.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1"
+					"text" : "3"
 				}
 
 			}
@@ -2432,7 +2432,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1870.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "0."
+					"text" : "37470."
 				}
 
 			}
@@ -2457,7 +2457,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1838.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "0"
+					"text" : "1"
 				}
 
 			}
@@ -2557,7 +2557,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1718.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "0."
+					"text" : "30."
 				}
 
 			}
@@ -2576,14 +2576,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-73",
-					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 3140.0, 240.0, 110.0, 52.0 ],
+					"patching_rect" : [ 3140.0, 240.0, 110.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "2 colour 0.894118 0.066667 0.733333"
+					"text" : "2 stopped"
 				}
 
 			}
