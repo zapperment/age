@@ -5072,7 +5072,7 @@ module.exports = [
       { name: "Dry Pan", type: paramType.unipolar },
       { name: "Ducking", type: paramType.unipolar },
       { name: "Master Volume", type: paramType.unipolar },
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
     ],
   },
   {
@@ -5082,7 +5082,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Preset", type: paramType.unipolar },
       { name: "Input Gain", type: paramType.unipolar },
       { name: "Volume", type: paramType.unipolar },
@@ -5192,7 +5192,7 @@ module.exports = [
       { name: "Mod7 Amt", type: paramType.unipolar },
       { name: "Mod8 Amt", type: paramType.unipolar },
       { name: "Master Volume", type: paramType.unipolar },
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Carrier Mix", type: paramType.unipolar },
       { name: "Modulator Mix", type: paramType.unipolar },
       { name: "Vocoder Mix", type: paramType.unipolar },
@@ -5223,7 +5223,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Band Count", type: paramType.unipolar },
       { name: "Vocoder/Equalizer", type: paramType.unipolar },
       { name: "HF Emphasis", type: paramType.unipolar },
@@ -5272,7 +5272,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Delay", type: paramType.unipolar },
       { name: "Feedback", type: paramType.unipolar },
       { name: "Rate", type: paramType.unipolar },
@@ -5286,7 +5286,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Comp On", type: paramType.unipolar },
       { name: "Comp Fast On", type: paramType.unipolar },
       { name: "Comp Peak On", type: paramType.unipolar },
@@ -5311,7 +5311,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "HPF On", type: paramType.unipolar },
       { name: "HPF Frequency", type: paramType.unipolar },
       { name: "LPF On", type: paramType.unipolar },
@@ -5339,7 +5339,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Ratio", type: paramType.unipolar },
       { name: "Threshold", type: paramType.unipolar },
       { name: "Attack", type: paramType.unipolar },
@@ -5353,7 +5353,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Amount", type: paramType.unipolar },
       { name: "Foldback", type: paramType.unipolar },
     ],
@@ -5365,7 +5365,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Unit", type: paramType.unipolar },
       { name: "Step Length", type: paramType.unipolar },
       { name: "DelayTime (steps)", type: paramType.unipolar },
@@ -5382,7 +5382,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Attack", type: paramType.unipolar },
       { name: "Decay", type: paramType.unipolar },
       { name: "Sustain", type: paramType.unipolar },
@@ -5400,7 +5400,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Ratio", type: paramType.unipolar },
       { name: "Input Gain", type: paramType.unipolar },
       { name: "Threshold", type: paramType.unipolar },
@@ -5417,7 +5417,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Input Gain", type: paramType.unipolar },
       { name: "Threshold", type: paramType.unipolar },
       { name: "Soft Knee", type: paramType.unipolar },
@@ -5435,7 +5435,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Low Cut Enable", type: paramType.unipolar },
       { name: "Low Shelf Enable", type: paramType.unipolar },
       { name: "Low Shelf Gain", type: paramType.unipolar },
@@ -5461,7 +5461,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Input Gain", type: paramType.unipolar },
       { name: "Limiter Enable", type: paramType.unipolar },
       { name: "Look Ahead Enable", type: paramType.unipolar },
@@ -5479,7 +5479,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Low Width", type: paramType.unipolar },
       { name: "High Width", type: paramType.unipolar },
       { name: "X-Over Frequency", type: paramType.unipolar },
@@ -5493,7 +5493,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Pitch Bend Range", type: paramType.unipolar },
       { name: "Vibrato Rate", type: paramType.unipolar },
       { name: "Pitch Adjust On/Off", type: paramType.unipolar },
@@ -5516,7 +5516,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Filter A Freq", type: paramType.unipolar },
       { name: "Filter A Q", type: paramType.unipolar },
       { name: "Filter A Gain", type: paramType.unipolar },
@@ -5533,7 +5533,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Frequency", type: paramType.unipolar },
       { name: "Split", type: paramType.unipolar },
       { name: "Width", type: paramType.unipolar },
@@ -5550,7 +5550,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Analysis Type", type: paramType.unipolar },
       { name: "Algorithm Type", type: paramType.unipolar },
       { name: "Loop Length", type: paramType.unipolar },
@@ -5635,7 +5635,7 @@ module.exports = [
       { name: "Blend", type: paramType.unipolar },
       { name: "Tremor to Volume", type: paramType.unipolar },
       { name: "Volume", type: paramType.unipolar },
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
     ],
   },
   {
@@ -5645,7 +5645,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Chorus Delay", type: paramType.unipolar },
       { name: "Chorus Depth", type: paramType.unipolar },
       { name: "Chorus DryWet", type: paramType.unipolar },
@@ -5682,7 +5682,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Delay On", type: paramType.unipolar },
       { name: "Delay Tempo Sync", type: paramType.unipolar },
       { name: "Keep Pitch", type: paramType.unipolar },
@@ -5805,7 +5805,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Slow Speed", type: paramType.unipolar },
       { name: "X-Over Frequency", type: paramType.unipolar },
       { name: "Doppler", type: paramType.unipolar },
@@ -5827,7 +5827,14 @@ module.exports = [
     byName: "Digital Reverb",
     vendor: "Reason Studios",
     type: "Effect",
-    params: ["Enabled", "Size", "Decay", "Damping", "Algorithm", "Dry/Wet"],
+    params: [
+      { name: "Enabled", type: paramType.enabled },
+      { name: "Size", type: paramType.unipolar },
+      { name: "Decay", type: paramType.unipolar },
+      { name: "Damping", type: paramType.unipolar },
+      { name: "Algorithm", type: paramType.unipolar },
+      { name: "Dry/Wet", type: paramType.unipolar },
+    ],
   },
   {
     id: "rv7000",
@@ -5836,7 +5843,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Dry/Wet", type: paramType.unipolar },
       { name: "Decay", type: paramType.unipolar },
       { name: "HF Damp", type: paramType.unipolar },
@@ -5941,7 +5948,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Damage On/Off", type: paramType.unipolar },
       { name: "Damage Control", type: paramType.unipolar },
       { name: "Damage Type", type: paramType.unipolar },
@@ -5965,7 +5972,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Rate", type: paramType.unipolar },
       { name: "Attack Time", type: paramType.unipolar },
       { name: "Attack Shape", type: paramType.unipolar },
@@ -6000,7 +6007,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Amp Switch", type: paramType.unipolar },
       { name: "Cab Switch", type: paramType.unipolar },
       { name: "Gate", type: paramType.unipolar },
@@ -6019,7 +6026,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Amp Switch", type: paramType.unipolar },
       { name: "Cab Switch", type: paramType.unipolar },
       { name: "Drive", type: paramType.unipolar },
@@ -6038,7 +6045,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Mono", type: paramType.unipolar },
       { name: "Frequency", type: paramType.unipolar },
       { name: "Low Bypass", type: paramType.unipolar },
@@ -6052,7 +6059,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Bandwidth", type: paramType.unipolar },
       { name: "Feedback", type: paramType.unipolar },
       { name: "Filter Drive", type: paramType.unipolar },
@@ -6095,7 +6102,7 @@ module.exports = [
     vendor: "Reason Studios",
     type: "Effect",
     params: [
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
       { name: "Dist On", type: paramType.unipolar },
       { name: "Dist Amount", type: paramType.unipolar },
       { name: "Dist Character", type: paramType.unipolar },
@@ -6205,7 +6212,7 @@ module.exports = [
       { name: "Trig", type: paramType.unipolar },
       { name: "Ducking", type: paramType.unipolar },
       { name: "Dry/Wet Balance", type: paramType.unipolar },
-      { name: "Enabled", type: paramType.unipolar },
+      { name: "Enabled", type: paramType.enabled },
     ],
   },
   {
@@ -6214,7 +6221,12 @@ module.exports = [
     byName: "Unison",
     vendor: "Reason Studios",
     type: "Effect",
-    params: ["Enabled", "Voice Count", "Detune", "Dry/Wet"],
+    params: [
+      { name: "Enabled", type: paramType.enabled },
+      { name: "Voice Count", type: paramType.unipolar },
+      { name: "Detune", type: paramType.unipolar },
+      { name: "Dry/Wet", type: paramType.unipolar },
+    ],
   },
   {
     id: "gainTool",
