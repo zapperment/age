@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3835349846,
-	"viewrect" : [ 293.0, 518.0, 462.0, 662.0 ],
+	"modificationdate" : 3836205431,
+	"viewrect" : [ 36.0, 1058.0, 462.0, 320.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -95,11 +95,6 @@
 				"local" : 1
 			}
 ,
-			"PadPatcherSender.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
 			"determineRackDevice.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -111,6 +106,11 @@
 			}
 ,
 			"rackDevices.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"PadPatcherSender.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
