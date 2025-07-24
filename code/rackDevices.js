@@ -2,7 +2,6 @@ const { paramType } = require("./constants");
 
 module.exports = [
   {
-    id: "global",
     name: "Global Controls",
     vendor: "Reason Studios",
     type: "Utility",
@@ -17,7 +16,6 @@ module.exports = [
     ],
   },
   {
-    id: "arpeggioLab",
     name: "Arpeggio Lab",
     vendor: "Reason Studios",
     type: "Player",
@@ -58,7 +56,6 @@ module.exports = [
     ],
   },
   {
-    id: "midiOut",
     name: "MIDI Out Device",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -190,7 +187,6 @@ module.exports = [
     ],
   },
   {
-    id: "basslineGen",
     name: "Bassline Generator",
     vendor: "Reason Studios",
     type: "Player",
@@ -356,7 +352,6 @@ module.exports = [
     ],
   },
   {
-    id: "beatMap",
     name: "Beat Map",
     type: "Player",
     vendor: "Reason Studios",
@@ -397,7 +392,6 @@ module.exports = [
     ],
   },
   {
-    id: "chordSeq",
     name: "Chord Sequencer",
     vendor: "Reason Studios",
     type: "Player",
@@ -465,7 +459,6 @@ module.exports = [
     ],
   },
   {
-    id: "drumSeq",
     name: "Drum Sequencer",
     vendor: "Reason Studios",
     type: "Player",
@@ -517,7 +510,6 @@ module.exports = [
     ],
   },
   {
-    id: "dualArp",
     name: "Dual Arpeggio",
     vendor: "Reason Studios",
     type: "Player",
@@ -555,9 +547,7 @@ module.exports = [
       { name: "Pattern Select", type: paramType.pattern },
     ],
   },
-  // TODO: change param type where it is necessary
   {
-    id: "noteEcho",
     name: "Note Echo",
     vendor: "Reason Studios",
     type: "Player",
@@ -589,7 +579,6 @@ module.exports = [
     ],
   },
   {
-    id: "noteTool",
     name: "Note Tool",
     vendor: "Reason Studios",
     type: "Player",
@@ -633,7 +622,6 @@ module.exports = [
     ],
   },
   {
-    id: "patternMutator",
     name: "Pattern Mutator",
     vendor: "Reason Studios",
     type: "Player",
@@ -684,7 +672,6 @@ module.exports = [
     ],
   },
   {
-    id: "polyStepSeq",
     name: "PolyStep Sequencer",
     vendor: "Reason Studios",
     type: "Player",
@@ -724,7 +711,6 @@ module.exports = [
     ],
   },
   {
-    id: "quadNoteGen",
     name: "Quad Note Generator",
     vendor: "Reason Studios",
     type: "Player",
@@ -807,7 +793,6 @@ module.exports = [
     ],
   },
   {
-    id: "randomTool",
     name: "Random Tool",
     vendor: "Reason Studios",
     type: "Player",
@@ -846,7 +831,6 @@ module.exports = [
     ],
   },
   {
-    id: "scalesAndChords",
     name: "Scales & Chords",
     vendor: "Reason Studios",
     type: "Player",
@@ -867,7 +851,6 @@ module.exports = [
     ],
   },
   {
-    id: "algoritm",
     name: "Algoritm",
     byName: "FM Synthesizer",
     vendor: "Reason Studios",
@@ -1081,7 +1064,6 @@ module.exports = [
     ],
   },
   {
-    id: "complex1",
     name: "Complex-1",
     byName: "Modular Synthesizer",
     vendor: "Reason Studios",
@@ -1195,7 +1177,6 @@ module.exports = [
     ],
   },
   {
-    id: "drOcto",
     name: "Dr. Octo Rex",
     byName: "Loop Player",
     vendor: "Reason Studios",
@@ -1252,7 +1233,6 @@ module.exports = [
     ],
   },
   {
-    id: "europa",
     name: "Europa",
     byName: "Shapeshifting Synthesizer",
     vendor: "Reason Studios",
@@ -1432,7 +1412,6 @@ module.exports = [
     ],
   },
   {
-    id: "friktion",
     name: "Friktion",
     byName: "Modeled Strings",
     vendor: "Reason Studios",
@@ -1532,7 +1511,6 @@ module.exports = [
     ],
   },
   {
-    id: "grain",
     name: "Grain",
     byName: "Sample Manipulator",
     vendor: "Reason Studios",
@@ -1674,7 +1652,6 @@ module.exports = [
     ],
   },
   {
-    id: "humanaPangea",
     name: "Humana / Pangea",
     byName: "Vocal Ensemble / World Instruments",
     vendor: "Reason Studios",
@@ -1722,7 +1699,6 @@ module.exports = [
     ],
   },
   {
-    id: "klang",
     name: "Klang",
     byName: "Tuned Percussion",
     vendor: "Reason Studios",
@@ -1770,7 +1746,6 @@ module.exports = [
     ],
   },
   {
-    id: "id8",
     name: "ID8",
     byName: "Instrument Device",
     vendor: "Reason Studios",
@@ -1782,7 +1757,6 @@ module.exports = [
     ],
   },
   {
-    id: "kong",
     name: "Kong",
     byName: "Drum Designer",
     vendor: "Reason Studios",
@@ -2021,7 +1995,6 @@ module.exports = [
     ],
   },
   {
-    id: "layers",
     name: "Layers",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -2225,7 +2198,6 @@ module.exports = [
     ],
   },
   {
-    id: "layersWave",
     name: "Layers Wave Edition",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -2428,7 +2400,6 @@ module.exports = [
     ],
   },
   {
-    id: "malstrom",
     name: "Malström",
     byName: "Graintable Synthesizer",
     vendor: "Reason Studios",
@@ -2522,7 +2493,6 @@ module.exports = [
     ],
   },
   {
-    id: "mimic",
     name: "Mimic",
     byName: "Creative Sampler",
     vendor: "Reason Studios",
@@ -2732,7 +2702,6 @@ module.exports = [
     ],
   },
   {
-    id: "monotone",
     name: "Monotone",
     byName: "Bass Synthesizer",
     vendor: "Reason Studios",
@@ -2783,7 +2752,6 @@ module.exports = [
     ],
   },
   {
-    id: "nnxt",
     name: "NN-XT",
     byName: "Advanced Sampler",
     vendor: "Reason Studios",
@@ -2800,7 +2768,6 @@ module.exports = [
     ],
   },
   {
-    id: "nn19",
     name: "NN-19",
     byName: "Digital Sampler",
     vendor: "Reason Studios",
@@ -2856,7 +2823,6 @@ module.exports = [
     ],
   },
   {
-    id: "objekt",
     name: "Objekt",
     byName: "Modeling Synthesizer",
     vendor: "Reason Studios",
@@ -3070,7 +3036,6 @@ module.exports = [
     ],
   },
   {
-    id: "parsec",
     name: "Parsec",
     byName: "Spectral Synthesizer",
     vendor: "Reason Studios",
@@ -3184,7 +3149,6 @@ module.exports = [
     ],
   },
   {
-    id: "polytone",
     name: "Polytone",
     byName: "Dual-Layer Synthesizer",
     vendor: "Reason Studios",
@@ -3313,7 +3277,6 @@ module.exports = [
     ],
   },
   {
-    id: "procPianos",
     name: "Processed Pianos",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -3440,7 +3403,6 @@ module.exports = [
     ],
   },
   {
-    id: "px7",
     name: "PX7",
     byName: "FM Synthesizer",
     vendor: "Reason Studios",
@@ -3498,7 +3460,6 @@ module.exports = [
     ],
   },
   {
-    id: "radKeys",
     name: "Radical Keys",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -3553,7 +3514,6 @@ module.exports = [
     ],
   },
   {
-    id: "radPiano",
     name: "Radical Piano",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -3585,7 +3545,6 @@ module.exports = [
     ],
   },
   {
-    id: "reasonDrums",
     name: "Reason Drum Kits",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -3802,7 +3761,6 @@ module.exports = [
     ],
   },
   {
-    id: "reasonElecBass",
     name: "Reason Electric Bass",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -3841,7 +3799,6 @@ module.exports = [
     ],
   },
   {
-    id: "redrum",
     name: "Redrum",
     byName: "Drum Computer",
     vendor: "Reason Studios",
@@ -3966,7 +3923,6 @@ module.exports = [
     ],
   },
   {
-    id: "rytmik",
     name: "Rytmik",
     byName: "Drum Machine",
     vendor: "Reason Studios",
@@ -4085,7 +4041,6 @@ module.exports = [
     ],
   },
   {
-    id: "scenic",
     name: "Scenic",
     byName: "Hybrid Instrument",
     vendor: "Reason Studios",
@@ -4281,7 +4236,6 @@ module.exports = [
     ],
   },
   {
-    id: "subtractor",
     name: "SubTractor",
     byName: "Analog Synthesizer",
     vendor: "Reason Studios",
@@ -4370,7 +4324,6 @@ module.exports = [
     ],
   },
   {
-    id: "thor",
     name: "Thor",
     byName: "Polysonic Synthesizer",
     vendor: "Reason Studios",
@@ -4592,7 +4545,6 @@ module.exports = [
     ],
   },
   {
-    id: "umpfClub",
     name: "Umpf Club Drums",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -4799,7 +4751,6 @@ module.exports = [
     ],
   },
   {
-    id: "umpfRetro",
     name: "Umpf Retro Beats",
     vendor: "Reason Studios",
     type: "Instrument",
@@ -5018,7 +4969,6 @@ module.exports = [
     ],
   },
   {
-    id: "alligator",
     name: "Alligator",
     byName: "Filter Gate",
     vendor: "Reason Studios",
@@ -5085,7 +5035,6 @@ module.exports = [
     ],
   },
   {
-    id: "audiomatic",
     name: "Audiomatic",
     byName: "Retro Transformer",
     vendor: "Reason Studios",
@@ -5100,7 +5049,6 @@ module.exports = [
     ],
   },
   {
-    id: "bvx",
     name: "BV-X",
     byName: "Multimode Vocoder",
     vendor: "Reason Studios",
@@ -5226,7 +5174,6 @@ module.exports = [
     ],
   },
   {
-    id: "bv512",
     name: "BV512",
     byName: "Digital Vocoder",
     vendor: "Reason Studios",
@@ -5275,7 +5222,6 @@ module.exports = [
     ],
   },
   {
-    id: "cf101",
     name: "CF-101",
     byName: "Chorus/Flanger",
     vendor: "Reason Studios",
@@ -5290,7 +5236,6 @@ module.exports = [
     ],
   },
   {
-    id: "chDynamics",
     name: "Channel Dynamics",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5315,7 +5260,6 @@ module.exports = [
     ],
   },
   {
-    id: "chEq",
     name: "Channel EQ",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5342,7 +5286,6 @@ module.exports = [
     ],
   },
   {
-    id: "comp01",
     name: "COMP-01",
     byName: "Compressor/Limiter",
     vendor: "Reason Studios",
@@ -5356,7 +5299,6 @@ module.exports = [
     ],
   },
   {
-    id: "d11",
     name: "D-11",
     byName: "Foldback Distortion",
     vendor: "Reason Studios",
@@ -5368,7 +5310,6 @@ module.exports = [
     ],
   },
   {
-    id: "ddl1",
     name: "DDL-1",
     byName: "Digital Delay Line",
     vendor: "Reason Studios",
@@ -5385,7 +5326,6 @@ module.exports = [
     ],
   },
   {
-    id: "ecf42",
     name: "ECF-42",
     byName: "Envelope Controlled Filter",
     vendor: "Reason Studios",
@@ -5404,7 +5344,6 @@ module.exports = [
     ],
   },
   {
-    id: "masterBusComp",
     name: "Master Bus Compressor",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5421,7 +5360,6 @@ module.exports = [
     ],
   },
   {
-    id: "mClassComp",
     name: "MClass Compressor",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5439,7 +5377,6 @@ module.exports = [
     ],
   },
   {
-    id: "mClassEq",
     name: "MClass Equalizer",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5465,7 +5402,6 @@ module.exports = [
     ],
   },
   {
-    id: "mClassMax",
     name: "MClass Maximizer",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5483,7 +5419,6 @@ module.exports = [
     ],
   },
   {
-    id: "mClassStereoImg",
     name: "MClass Stereo Imager",
     vendor: "Reason Studios",
     type: "Effect",
@@ -5496,7 +5431,6 @@ module.exports = [
     ],
   },
   {
-    id: "neptune",
     name: "Neptune",
     byName: "Pitch Adjuster",
     vendor: "Reason Studios",
@@ -5519,7 +5453,6 @@ module.exports = [
     ],
   },
   {
-    id: "peq2",
     name: "PEQ-2",
     byName: "Two-Band Parametric EQ",
     vendor: "Reason Studios",
@@ -5536,7 +5469,6 @@ module.exports = [
     ],
   },
   {
-    id: "ph90",
     name: "PH-90",
     byName: "Phaser",
     vendor: "Reason Studios",
@@ -5553,7 +5485,6 @@ module.exports = [
     ],
   },
   {
-    id: "polar",
     name: "Polar",
     byName: "Dual Pitch Shifter",
     vendor: "Reason Studios",
@@ -5615,7 +5546,6 @@ module.exports = [
     ],
   },
   {
-    id: "pulveriser",
     name: "Pulveriser",
     byName: "Demolition",
     vendor: "Reason Studios",
@@ -5648,7 +5578,6 @@ module.exports = [
     ],
   },
   {
-    id: "quartet",
     name: "Quartet",
     byName: "Chorus Ensemble",
     vendor: "Reason Studios",
@@ -5685,7 +5614,6 @@ module.exports = [
     ],
   },
   {
-    id: "ripley",
     name: "Ripley",
     byName: "Space Delay",
     vendor: "Reason Studios",
@@ -5808,7 +5736,6 @@ module.exports = [
     ],
   },
   {
-    id: "rotor",
     name: "Rotor",
     byName: "Rotary Speaker",
     vendor: "Reason Studios",
@@ -5831,7 +5758,6 @@ module.exports = [
     ],
   },
   {
-    id: "rv7",
     name: "RV-7",
     byName: "Digital Reverb",
     vendor: "Reason Studios",
@@ -5846,7 +5772,6 @@ module.exports = [
     ],
   },
   {
-    id: "rv7000",
     name: "RV7000 MkII",
     byName: "Reverb",
     vendor: "Reason Studios",
@@ -5951,7 +5876,6 @@ module.exports = [
     ],
   },
   {
-    id: "scream4",
     name: "Scream 4",
     byName: "Distortion",
     vendor: "Reason Studios",
@@ -5976,7 +5900,6 @@ module.exports = [
     ],
   },
   {
-    id: "sidechainTool",
     name: "Sidechain Tool",
     vendor: "Reason Studios",
     type: "Effect",
@@ -6011,7 +5934,6 @@ module.exports = [
     ],
   },
   {
-    id: "softubeAmp",
     name: "Softube Amp",
     vendor: "Reason Studios",
     type: "Effect",
@@ -6030,7 +5952,6 @@ module.exports = [
     ],
   },
   {
-    id: "softubeBassAmp",
     name: "Softube Bass Amp",
     vendor: "Reason Studios",
     type: "Effect",
@@ -6049,7 +5970,6 @@ module.exports = [
     ],
   },
   {
-    id: "stereoTool",
     name: "Stereo Tool",
     vendor: "Reason Studios",
     type: "Effect",
@@ -6062,7 +5982,6 @@ module.exports = [
     ],
   },
   {
-    id: "sweeper",
     name: "Sweeper",
     byName: "Modulation Effect",
     vendor: "Reason Studios",
@@ -6105,7 +6024,6 @@ module.exports = [
     ],
   },
   {
-    id: "synchronous",
     name: "Synchronous",
     byName: "Effect Modulator",
     vendor: "Reason Studios",
@@ -6192,7 +6110,6 @@ module.exports = [
     ],
   },
   {
-    id: "theEcho",
     name: "The Echo",
     vendor: "Reason Studios",
     type: "Effect",
@@ -6225,7 +6142,6 @@ module.exports = [
     ],
   },
   {
-    id: "un19",
     name: "UN-19",
     byName: "Unison",
     vendor: "Reason Studios",
@@ -6238,7 +6154,6 @@ module.exports = [
     ],
   },
   {
-    id: "gainTool",
     name: "Gain Tool",
     vendor: "Reason Studios",
     type: "Utility",
@@ -6265,7 +6180,6 @@ module.exports = [
     ],
   },
   {
-    id: "lineMixer62",
     name: "Line Mixer 6:2",
     vendor: "Reason Studios",
     type: "Utility",
@@ -6306,7 +6220,6 @@ module.exports = [
     ],
   },
   {
-    id: "matrix",
     name: "Matrix",
     byName: "Pattern Sequencer",
     vendor: "Reason Studios",
@@ -6317,7 +6230,6 @@ module.exports = [
     ],
   },
   {
-    id: "mixer142",
     name: "Mixer 14:2",
     vendor: "Reason Studios",
     type: "Utility",
@@ -6498,7 +6410,6 @@ module.exports = [
     ],
   },
   {
-    id: "pulsar",
     name: "Pulsar",
     byName: "Dual LFO",
     vendor: "Reason Studios",
@@ -6537,7 +6448,6 @@ module.exports = [
     ],
   },
   {
-    id: "rpg8",
     name: "RPG-8",
     byName: "Monophonic Arpeggiator",
     vendor: "Reason Studios",

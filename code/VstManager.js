@@ -2,15 +2,18 @@ const determineRackDevice = require("./determineRackDevice");
 const getRackDeviceName = require("./getRackDeviceName");
 
 class VstManager {
+  #devices = new Map();
+  #currentDeviceId = 0;
+
   #rawParams = new Map();
   #currentParamId = 0;
-
-  #devices = [];
 
   constructor() {}
 
   clear() {
-    this.#devices = [];
+    this.#devices.clear();
+    this.#currentDeviceId = 0;
+
     this.#rawParams.clear();
     this.#currentParamId = 0;
   }
@@ -47,7 +50,7 @@ class VstManager {
   }
 
   print() {
-    for (const device of this.#devices) {
+    for (const device of this.#devices.values()) {
       post(
         device.patch
           ? `${device.patch} (${device.name}${
@@ -72,7 +75,11 @@ class VstManager {
     }
 
     for (const [patch, params] of Object.entries(paramsByPatch)) {
-      this.#devices.push(determineRackDevice(patch, params));
+      this.#currentDeviceId++;
+      this.#devices.set(
+        this.#currentDeviceId,
+        determineRackDevice(this.#currentDeviceId, patch, params)
+      );
     }
   }
 

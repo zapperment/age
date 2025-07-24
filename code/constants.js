@@ -50,7 +50,6 @@ module.exports = {
   metroInterval: 15, // metro interval in ticks
   placeholderParam: "*",
   unknownDevice: {
-    id: "unknown",
     name: "Unknown Device",
     vendor: "Unknown",
     type: "Unknown",
