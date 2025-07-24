@@ -1,8 +1,8 @@
 const rackDevices = require("./rackDevices");
 const isCombinatorDevice = require("./isCombinatorDevice");
-const { unknownDevice, placeholderParam, paramType } = require("./constants");
+const { unknownDevice, paramType } = require("./constants");
 
-function determineRackDevice(params) {
+function determineRackDevice(patch, params) {
   let device = null;
   if (isCombinatorDevice(params)) {
     device = {
@@ -11,6 +11,7 @@ function determineRackDevice(params) {
       vendor: "Reason Studios",
       type: "Utility",
       params: [],
+      patch,
     };
     let parameterIndex = 0;
     for (const param of params) {
@@ -20,24 +21,28 @@ function determineRackDevice(params) {
             name: param.name,
             type: paramType.control,
             value: param.value,
+            id: param.id,
           });
         } else if (parameterIndex < 64) {
           device.params.push({
             name: param.name,
             type: paramType.switch,
             value: param.value,
+            id: param.id,
           });
         } else if (param.name === "Enabled") {
           device.params.push({
             name: param.name,
             type: paramType.enabled,
             value: param.value,
+            id: param.id,
           });
         } else if (param.name === "Mixer Level") {
           device.params.push({
             name: param.name,
             type: paramType.unipolar,
             value: param.value,
+            id: param.id,
           });
         }
       }
@@ -60,21 +65,31 @@ function determineRackDevice(params) {
   if (device) {
     return {
       ...device,
-      params: device.params.map((param) => ({
-        name: param.name,
-        type: param.type,
-        value: params.find((p) => p.name === param.name).value,
-      })),
+      params: device.params.map((param) => {
+        const rawParam = params.find((p) => p.name === param.name);
+        return {
+          name: param.name,
+          type: param.type,
+          value: rawParam.value,
+          id: rawParam.id,
+        };
+      }),
+      patch,
     };
   }
 
   return {
     ...unknownDevice,
-    params: params.map((param) => ({
-      name: param.name,
-      type: paramType.unipolar,
-      value: param.value,
-    })),
+    params: params.map((param) => {
+      const rawParam = params.find((p) => p.name === param.name);
+      return {
+        name: param.name,
+        type: paramType.unipolar,
+        value: rawParam.value,
+        id: rawParam.id,
+      };
+    }),
+    patch,
   };
 }
 

@@ -1,20 +1,9 @@
-const { placeholderParam, paramType } = require("./constants");
-
-const combiParams = [];
-
-for (let i = 0; i < 32; i++) {
-  combiParams.push({ name: placeholderParam, type: paramType.control });
-}
-for (let i = 32; i < 64; i++) {
-  combiParams.push({ name: placeholderParam, type: paramType.switch });
-}
-combiParams.push({ name: "Enabled", type: paramType.enabled });
-combiParams.push({ name: "Mixer Level", type: paramType.unipolar });
+const { paramType } = require("./constants");
 
 module.exports = [
   {
     id: "global",
-    name: "Global",
+    name: "Global Controls",
     vendor: "Reason Studios",
     type: "Utility",
     params: [
@@ -26,13 +15,6 @@ module.exports = [
       { name: "Mod Wheel", type: paramType.unipolar },
       { name: "Pitch Bend", type: paramType.bipolar },
     ],
-  },
-  {
-    id: "combinator",
-    name: "Combinator",
-    vendor: "Reason Studios",
-    type: "Utility",
-    params: combiParams,
   },
   {
     id: "arpeggioLab",

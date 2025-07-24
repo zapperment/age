@@ -2,129 +2,77 @@ const determineRackDevice = require("./determineRackDevice");
 const getRackDeviceName = require("./getRackDeviceName");
 
 class VstManager {
-  #params = new Map();
-  #currentId = 0;
+  #rawParams = new Map();
+  #currentParamId = 0;
 
-  #controls = [];
-  #switches = [];
+  #devices = [];
 
   constructor() {}
 
   clear() {
-    this.#params.clear();
-    this.#currentId = 0;
-    this.#controls = [];
-    this.#switches = [];
+    this.#devices = [];
+    this.#rawParams.clear();
+    this.#currentParamId = 0;
   }
 
-  add(value) {
-    this.#currentId++;
-    if (this.#isIgnored(value)) {
+  addRawParam(rawParamString) {
+    this.#currentParamId++;
+    if (this.#isIgnored(rawParamString)) {
       return;
     }
-    const tokens = value.split(":");
-    const device = tokens.length === 1 ? "{GLOBAL}" : tokens[0];
+    const tokens = rawParamString.split(":");
+    const patch = tokens.length === 1 ? "" : tokens[0];
     const name = tokens.length === 1 ? tokens[0] : tokens[1];
 
-    this.#params.set(this.#currentId, {
-      device,
+    this.#rawParams.set(this.#currentParamId, {
+      patch,
       name,
       value: null,
-      id: this.#currentId,
+      id: this.#currentParamId,
     });
   }
 
-  ids(outlet) {
-    for (const param of this.#params.values()) {
+  paramIds(outlet) {
+    for (const param of this.#rawParams.values()) {
       outlet(0, param.id);
     }
   }
 
-  set(id, value) {
-    const param = this.#params.get(id);
+  setRawParamValue(paramId, value) {
+    const param = this.#rawParams.get(paramId);
     if (!param) {
-      throw new Error(`No param found for ID ${id}`);
+      throw new Error(`No param found for parameter ID ${paramId}`);
     }
     param.value = value;
   }
 
   print() {
-    post("********** PARAMETERS **********\n");
-    for (const param of this.#params.values()) {
+    for (const device of this.#devices) {
       post(
-        `${param.id} — ${param.device} – ${param.name}: ${param.value}${
-          param.isCombinator
-            ? ` (${param.isTopCombinator ? "Top " : ""}Combinator${
-                param.type ? ` ${param.type}` : ""
-              })`
-            : ` (${getRackDeviceName(param.deviceType)})`
-        }\n`
+        device.patch
+          ? `${device.patch} (${device.name}${
+              device.byName ? ` ${device.byName}` : ""
+            })\n`
+          : `${device.name}\n`
       );
-    }
-    post("********** CONTROLS **********\n");
-    for (const param of this.#controls) {
-      post(`${param.id} — ${param.name}: ${param.value}\n`);
-    }
-    post("********** SWITCHES **********\n");
-    for (const param of this.#switches) {
-      post(`${param.id} — ${param.name}: ${param.value}\n`);
-    }
-  }
-
-  print2() {
-    post("\n");
-    for (const param of this.#params.values()) {
-      if (param.device === "MIDI Out Device" || param.device === "{GLOBAL}") {
-        continue;
+      for (const param of device.params) {
+        post(`  ${param.name}: ${param.value}\n`);
       }
-      post(`"${param.name}",`);
     }
   }
 
   analyse() {
-    const devices = {};
+    const paramsByPatch = {};
 
-    for (const param of this.#params.values()) {
-      if (!devices[param.device]) {
-        devices[param.device] = [];
+    for (const param of this.#rawParams.values()) {
+      if (!paramsByPatch[param.patch]) {
+        paramsByPatch[param.patch] = [];
       }
-      devices[param.device].push(param);
+      paramsByPatch[param.patch].push(param);
     }
 
-    let isTopCombinator = true;
-    for (const params of Object.values(devices)) {
-      const rackDevice = determineRackDevice(params);
-      for (const param of params) {
-        param.deviceType = rackDevice.id;
-      }
-      if (rackDevice.id === "combinator") {
-        let parameterIndex = 0;
-        for (const param of params) {
-          if (param.name.match(/^Unused (Control|Switch) [0-9]+$/)) {
-            this.#params.delete(param.id);
-          } else {
-            param.isCombinator = true;
-            param.isTopCombinator = isTopCombinator;
-            if (parameterIndex < 32) {
-              param.type = "Control";
-              if (isTopCombinator) {
-                this.#controls.push(param);
-              }
-            } else if (parameterIndex < 64) {
-              param.type = "Switch";
-              if (isTopCombinator) {
-                this.#switches.push(param);
-              }
-            }
-          }
-          parameterIndex++;
-        }
-        isTopCombinator = false;
-      } else {
-        for (const param of params) {
-          param.isCombinator = false;
-        }
-      }
+    for (const [patch, params] of Object.entries(paramsByPatch)) {
+      this.#devices.push(determineRackDevice(patch, params));
     }
   }
 
