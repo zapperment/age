@@ -1,5 +1,4 @@
 const determineRackDevice = require("./determineRackDevice");
-const getRackDeviceName = require("./getRackDeviceName");
 
 class VstManager {
   #devices = new Map();
@@ -58,8 +57,14 @@ class VstManager {
             })\n`
           : `${device.name}\n`
       );
+      post(`  ID:   ${device.id}\n`);
+      post(`  Vendor: ${device.vendor}\n`);
+      post(`  Type: ${device.type}\n`);
+      post(`  Params:\n`);
       for (const param of device.params) {
-        post(`  ${param.name}: ${param.value}\n`);
+        post(`    ${param.name} = ${param.value}\n`);
+        post(`      ID: ${param.id}\n`);
+        post(`      Type: ${param.type}\n`);
       }
     }
   }

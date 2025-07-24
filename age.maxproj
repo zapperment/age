@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836205431,
-	"viewrect" : [ 36.0, 1058.0, 462.0, 320.0 ],
+	"modificationdate" : 3836218445,
+	"viewrect" : [ 722.0, 219.0, 971.0, 976.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -70,6 +70,11 @@
 				"local" : 1
 			}
 ,
+			"RackToggler.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"SimPadControlSender.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -111,6 +116,26 @@
 			}
 ,
 			"PadPatcherSender.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"isCombinatorDevice.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"isPlaySwitch.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"playSwitchLabels.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"colours.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

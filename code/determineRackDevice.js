@@ -1,5 +1,6 @@
 const rackDevices = require("./rackDevices");
 const isCombinatorDevice = require("./isCombinatorDevice");
+const isPlaySwitch = require("./isPlaySwitch");
 const { unknownDevice, paramType } = require("./constants");
 
 function determineRackDevice(id, patch, params) {
@@ -14,6 +15,7 @@ function determineRackDevice(id, patch, params) {
       patch,
     };
     let parameterIndex = 0;
+    let hasPlaySwitch = false;
     for (const param of params) {
       if (!param.name.match(/^Unused (Control|Switch) [0-9]+$/)) {
         if (parameterIndex < 32) {
@@ -24,10 +26,15 @@ function determineRackDevice(id, patch, params) {
             value: param.value,
           });
         } else if (parameterIndex < 64) {
+          let type = paramType.switch;
+          if (isPlaySwitch(param.name) && !hasPlaySwitch) {
+            type = paramType.play;
+            hasPlaySwitch = true;
+          }
           device.params.push({
             id: param.id,
             name: param.name,
-            type: paramType.switch,
+            type,
             value: param.value,
           });
         } else if (param.name === "Enabled") {
