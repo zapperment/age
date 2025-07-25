@@ -34,9 +34,13 @@ class VstManager {
     });
   }
 
-  paramIds(outlet) {
+  getRawParams(outlet) {
+    outlet(0, "params");
+  }
+
+  getParamValues(outlet) {
     for (const param of this.#rawParams.values()) {
-      outlet(0, param.id);
+      outlet(0, ["get", param.id]);
     }
   }
 
@@ -57,19 +61,19 @@ class VstManager {
             })\n`
           : `${device.name}\n`
       );
-      post(`  ID:   ${device.id}\n`);
+      post(`  ID:     ${device.id}\n`);
       post(`  Vendor: ${device.vendor}\n`);
-      post(`  Type: ${device.type}\n`);
+      post(`  Type:   ${device.type}\n`);
       post(`  Params:\n`);
       for (const param of device.params) {
         post(`    ${param.name} = ${param.value}\n`);
-        post(`      ID: ${param.id}\n`);
+        post(`      ID:   ${param.id}\n`);
         post(`      Type: ${param.type}\n`);
       }
     }
   }
 
-  analyse() {
+  determineDevices() {
     const paramsByPatch = {};
 
     for (const param of this.#rawParams.values()) {

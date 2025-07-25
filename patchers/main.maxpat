@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 3372.0, 1319.0 ],
+		"rect" : [ 894.0, 87.0, 1652.0, 1319.0 ],
 		"openinpresentation" : 1,
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
@@ -55,11 +55,10 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1459.0, 98.0, 1652.0, 1319.0 ],
+						"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
 						"gridsize" : [ 10.0, 10.0 ],
 						"subpatcher_template" : "zapperment",
 						"integercoordinates" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-77",
@@ -2357,7 +2356,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1658.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "20"
+					"text" : "41"
 				}
 
 			}
@@ -2432,7 +2431,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1870.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "37470."
+					"text" : "77760."
 				}
 
 			}
@@ -2557,7 +2556,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1718.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "30."
+					"text" : "0."
 				}
 
 			}
@@ -2582,7 +2581,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3140.0, 240.0, 110.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "2 stopped"
+					"text" : "0 stopped"
 				}
 
 			}
@@ -5229,7 +5228,7 @@
 					"bgfillcolor_proportion" : 0.39,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-129",
-					"items" : [ "AU DLS Synth 1", ",", "IAC Router to Reason 1", ",", "IAC Router to Reason 2", ",", "IAC Router to Reason 3", ",", "IAC Router to Reason 4", ",", "IAC Live to Router", ",", "IAC Live to Reason", ",", "IAC Stream Deck to Traktor", ",", "IAC Traktor to Stream Deck", ",", "IAC Bome to Reason", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW", ",", "Novation SL MkIII SL MkIII MIDI", ",", "Novation SL MkIII SL MkIII InControl", ",", "Novation SL MkIII SL MkIII To DIN 1", ",", "Novation SL MkIII SL MkIII To DIN 2", ",", "Novation SL MkIII SL MkIII To CV/Gate", ",", "Launchpad Mini MK3 LPMiniMK3 DAW In", ",", "Launchpad Mini MK3 LPMiniMK3 MIDI In", ",", "Scarlett 8i6 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "IAC Router to Reason 1", ",", "IAC Router to Reason 2", ",", "IAC Router to Reason 3", ",", "IAC Router to Reason 4", ",", "IAC Live to Router", ",", "IAC Live to Reason", ",", "IAC Stream Deck to Traktor", ",", "IAC Traktor to Stream Deck", ",", "IAC Bome to Reason", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW", ",", "Launchpad Mini MK3 LPMiniMK3 DAW In", ",", "Launchpad Mini MK3 LPMiniMK3 MIDI In", ",", "Scarlett 8i6 USB", ",", "from Max 1", ",", "from Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6420,6 +6419,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-316", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-309", 0 ]
 				}
 
