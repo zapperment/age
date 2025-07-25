@@ -4,8 +4,10 @@ class VstManager {
   #devices = new Map();
   #currentDeviceId = 0;
 
-  #rawParams = new Map();
+  #params = new Map();
   #currentParamId = 0;
+
+  #ignoredParamIds = new Set();
 
   constructor() {}
 
@@ -13,20 +15,23 @@ class VstManager {
     this.#devices.clear();
     this.#currentDeviceId = 0;
 
-    this.#rawParams.clear();
+    this.#params.clear();
     this.#currentParamId = 0;
+
+    this.#ignoredParamIds.clear();
   }
 
-  addRawParam(rawParamString) {
+  addParam(rawParam) {
     this.#currentParamId++;
-    if (this.#isIgnored(rawParamString)) {
+    if (this.#isIgnored(rawParam)) {
+      this.#ignoredParamIds.add(this.#currentParamId);
       return;
     }
-    const tokens = rawParamString.split(":");
+    const tokens = rawParam.split(":");
     const patch = tokens.length === 1 ? "" : tokens[0];
     const name = tokens.length === 1 ? tokens[0] : tokens[1];
 
-    this.#rawParams.set(this.#currentParamId, {
+    this.#params.set(this.#currentParamId, {
       patch,
       name,
       value: null,
@@ -39,17 +44,41 @@ class VstManager {
   }
 
   getParamValues(outlet) {
-    for (const param of this.#rawParams.values()) {
+    for (const param of this.#params.values()) {
       outlet(0, ["get", param.id]);
     }
   }
 
-  setRawParamValue(paramId, value) {
-    const param = this.#rawParams.get(paramId);
+  setParamValue(paramId, value) {
+    if (this.#ignoredParamIds.has(paramId)) {
+      return;
+    }
+    const param = this.#params.get(paramId);
     if (!param) {
       throw new Error(`No param found for parameter ID ${paramId}`);
     }
     param.value = value;
+  }
+
+  determineDevices() {
+    const paramsByPatch = {};
+
+    for (const param of this.#params.values()) {
+      if (!paramsByPatch[param.patch]) {
+        paramsByPatch[param.patch] = [];
+      }
+      paramsByPatch[param.patch].push(param);
+    }
+
+    for (const [patch, params] of Object.entries(paramsByPatch)) {
+      this.#currentDeviceId++;
+      const device = determineRackDevice(this.#currentDeviceId, patch, params);
+      for (const param of device.params) {
+        this.#params.set(param.id, param);
+      }
+      device.params = device.params.map((param) => param.id);
+      this.#devices.set(this.#currentDeviceId, device);
+    }
   }
 
   print() {
@@ -65,30 +94,12 @@ class VstManager {
       post(`  Vendor: ${device.vendor}\n`);
       post(`  Type:   ${device.type}\n`);
       post(`  Params:\n`);
-      for (const param of device.params) {
+      const params = device.params.map((id) => this.#params.get(id));
+      for (const param of params) {
         post(`    ${param.name} = ${param.value}\n`);
         post(`      ID:   ${param.id}\n`);
         post(`      Type: ${param.type}\n`);
       }
-    }
-  }
-
-  determineDevices() {
-    const paramsByPatch = {};
-
-    for (const param of this.#rawParams.values()) {
-      if (!paramsByPatch[param.patch]) {
-        paramsByPatch[param.patch] = [];
-      }
-      paramsByPatch[param.patch].push(param);
-    }
-
-    for (const [patch, params] of Object.entries(paramsByPatch)) {
-      this.#currentDeviceId++;
-      this.#devices.set(
-        this.#currentDeviceId,
-        determineRackDevice(this.#currentDeviceId, patch, params)
-      );
     }
   }
 
