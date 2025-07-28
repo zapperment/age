@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836218445,
-	"viewrect" : [ 722.0, 219.0, 971.0, 976.0 ],
+	"modificationdate" : 3836552249,
+	"viewrect" : [ 1526.0, 127.0, 971.0, 976.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -15,6 +15,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"experimentalVst.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"initialiseUI.maxpat" : 			{
@@ -33,11 +38,6 @@
 			}
 ,
 			"simPadController.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"experimentalVst.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -80,6 +80,11 @@
 				"local" : 1
 			}
 ,
+			"VstManager.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"clipIndexToPadIndex.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -90,32 +95,7 @@
 				"local" : 1
 			}
 ,
-			"padIndexToClipIndex.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"VstManager.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
 			"determineRackDevice.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"getRackDeviceName.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"rackDevices.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"PadPatcherSender.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -135,7 +115,22 @@
 				"local" : 1
 			}
 ,
+			"rackDevices.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"padIndexToClipIndex.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"colours.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"determinePlayParam.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

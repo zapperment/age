@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 894.0, 87.0, 1652.0, 1319.0 ],
+		"rect" : [ 34.0, 87.0, 2225.0, 1319.0 ],
 		"openinpresentation" : 1,
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
@@ -22,6 +22,81 @@
 		"integercoordinates" : 1,
 		"title" : "age:main",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 2130.0, 1240.0, 35.0, 23.0 ],
+					"style" : "rnbodefault",
+					"text" : "close"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 2080.0, 1200.0, 35.0, 23.0 ],
+					"style" : "rnbodefault",
+					"text" : "open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 2020.0, 1180.0, 33.0, 23.0 ],
+					"style" : "rnbodefault",
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1950.0, 1220.0, 51.0, 23.0 ],
+					"style" : "rnbodefault",
+					"text" : "initialise"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1980.0, 1420.0, 55.0, 23.0 ],
+					"text" : "dac~ 1 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 1980.0, 1320.0, 94.0, 23.0 ],
+					"text" : "experimentalVst"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"color" : [ 0.065395072102547, 0.501824915409088, 0.251003384590149, 1.0 ],
 					"id" : "obj-1",
@@ -55,10 +130,11 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
+						"rect" : [ 430.0, 123.0, 1444.0, 848.0 ],
 						"gridsize" : [ 10.0, 10.0 ],
 						"subpatcher_template" : "zapperment",
 						"integercoordinates" : 1,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-77",
@@ -2356,7 +2432,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1658.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "41"
+					"text" : "1"
 				}
 
 			}
@@ -2381,7 +2457,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1690.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "3"
+					"text" : "1"
 				}
 
 			}
@@ -2431,7 +2507,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1870.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "77760."
+					"text" : "0."
 				}
 
 			}
@@ -2456,7 +2532,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1838.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1"
+					"text" : "0"
 				}
 
 			}
@@ -2575,13 +2651,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-73",
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 3140.0, 240.0, 110.0, 23.0 ],
+					"patching_rect" : [ 3140.0, 240.0, 110.0, 52.0 ],
 					"style" : "rnbodefault",
-					"text" : "0 stopped"
+					"text" : "2 colour 0.894118 0.066667 0.733333"
 				}
 
 			}
@@ -5610,6 +5687,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-113", 0 ],
 					"source" : [ "obj-111", 1 ]
 				}
@@ -5931,6 +6015,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"order" : 0,
 					"source" : [ "obj-20", 0 ]
@@ -6120,6 +6218,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-133", 0 ],
 					"source" : [ "obj-261", 0 ]
 				}
@@ -6300,6 +6405,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-312", 0 ],
 					"midpoints" : [ 1329.5, 2606.8671875, 1245.3125, 2606.8671875, 1245.3125, 2092.94140625, 1129.5, 2092.94140625 ],
 					"source" : [ "obj-283", 0 ]
@@ -6368,6 +6480,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-302", 0 ],
 					"source" : [ "obj-295", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -6772,6 +6891,7 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-2::obj-13" : [ "vst~[5]", "vst~[1]", 0 ],
 			"obj-324::obj-10::obj-13" : [ "vst~[22]", "vst~[1]", 0 ],
 			"obj-324::obj-13::obj-13" : [ "vst~[15]", "vst~[1]", 0 ],
 			"obj-324::obj-16::obj-13" : [ "vst~[16]", "vst~[1]", 0 ],
@@ -6871,6 +6991,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "VstManager.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "clipIndexToPadIndex.js",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
 				"patcherrelativepath" : "../code",
@@ -6885,10 +7012,38 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "determineRackDevice.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "experimentalVst.maxpat",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "initialiseUI.maxpat",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "isCombinatorDevice.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "isPlaySwitch.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -6900,6 +7055,20 @@
 			}
 , 			{
 				"name" : "padIndexToClipIndex.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "playSwitchLabels.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "rackDevices.js",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

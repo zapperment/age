@@ -1,9 +1,8 @@
-const assert = require("node:assert");
+import { expect, test } from "vitest";
+import determineRackDevice from "./determineRackDevice";
 
-const determineRackDevice = require("./determineRackDevice");
-
-assert(
-  JSON.stringify(
+test("Given Combinator device parameters, the device returned should be correct", () => {
+  expect(
     determineRackDevice(666, "My nice Combi", [
       { name: "Singen", value: 0.23, id: 1 },
       { name: "Tanzen", value: 0.88, id: 2 },
@@ -74,65 +73,63 @@ assert(
     ]),
     null,
     2
-  ) ===
-    `
-{
-  "id": 666,
-  "name": "Combinator",
-  "vendor": "Reason Studios",
-  "type": "Utility",
-  "params": [
+  ).toMatchInlineSnapshot(`
     {
-      "id": 1,
-      "name": "Singen",
-      "type": "control",
-      "value": 0.23
-    },
-    {
-      "id": 2,
-      "name": "Tanzen",
-      "type": "control",
-      "value": 0.88
-    },
-    {
-      "id": 3,
-      "name": "Lachen",
-      "type": "control",
-      "value": 0.1
-    },
-    {
-      "id": 33,
-      "name": "Hello",
-      "type": "switch",
-      "value": 0.11
-    },
-    {
-      "id": 34,
-      "name": "Goodbye",
-      "type": "switch",
-      "value": 0.12
-    },
-    {
-      "id": 65,
-      "name": "Enabled",
-      "type": "enabled",
-      "value": 1
-    },
-    {
-      "id": 66,
-      "name": "Mixer Level",
-      "type": "unipolar",
-      "value": 0.5
+      "id": 666,
+      "name": "Combinator",
+      "params": [
+        {
+          "id": 1,
+          "name": "Singen",
+          "type": "control",
+          "value": 0.23,
+        },
+        {
+          "id": 2,
+          "name": "Tanzen",
+          "type": "control",
+          "value": 0.88,
+        },
+        {
+          "id": 3,
+          "name": "Lachen",
+          "type": "control",
+          "value": 0.1,
+        },
+        {
+          "id": 33,
+          "name": "Hello",
+          "type": "switch",
+          "value": 0.11,
+        },
+        {
+          "id": 34,
+          "name": "Goodbye",
+          "type": "switch",
+          "value": 0.12,
+        },
+        {
+          "id": 65,
+          "name": "Enabled",
+          "type": "enabled",
+          "value": 1,
+        },
+        {
+          "id": 66,
+          "name": "Mixer Level",
+          "type": "unipolar",
+          "value": 0.5,
+        },
+      ],
+      "patch": "My nice Combi",
+      "type": "Utility",
+      "vendor": "Reason Studios",
     }
-  ],
-  "patch": "My nice Combi"
-}
-`.trim(),
-  "Given Combinator device parameters, the device returned should be correct"
-);
+  `);
+});
 
-assert(
-  JSON.stringify(
+test("Given parameters from the Scales & Chords device, the device returned should be correct", () =>
+  expect(
     determineRackDevice(667, "My happy little scales and chords", [
       { name: "Add Color", value: 0.1, id: 1 },
       { name: "Add Octave Down", value: 0.2, id: 2 },
@@ -147,140 +144,130 @@ assert(
       { name: "On", value: 1, id: 11 },
       { name: "Open Chords", value: 0.1, id: 12 },
       { name: "Scale", value: 0.1, id: 13 },
-    ]),
-    null,
-    2
-  ) ===
-    `
-{
-  "id": 667,
-  "name": "Scales & Chords",
-  "vendor": "Reason Studios",
-  "type": "Player",
-  "params": [
+    ])
+  ).toMatchInlineSnapshot(`
     {
-      "id": 1,
-      "name": "Add Color",
-      "type": "boolean",
-      "value": 0.1
-    },
-    {
-      "id": 2,
-      "name": "Add Octave Down",
-      "type": "boolean",
-      "value": 0.2
-    },
-    {
-      "id": 3,
-      "name": "Add Octave Up",
-      "type": "boolean",
-      "value": 0.3
-    },
-    {
-      "id": 4,
-      "name": "Alter",
-      "type": "boolean",
-      "value": 0.4
-    },
-    {
-      "id": 5,
-      "name": "Chords",
-      "type": "boolean",
-      "value": 0.5
-    },
-    {
-      "id": 6,
-      "name": "Custom Scale",
-      "type": "unipolar",
-      "value": 0.6
-    },
-    {
-      "id": 7,
-      "name": "Filter Notes",
-      "type": "boolean",
-      "value": 0.7
-    },
-    {
-      "id": 8,
-      "name": "Inversion",
-      "type": "unipolar",
-      "value": 0.8
-    },
-    {
-      "id": 9,
-      "name": "Key",
-      "type": "unipolar",
-      "value": 0.9
-    },
-    {
-      "id": 10,
-      "name": "Nr of Notes",
-      "type": "unipolar",
-      "value": 1
-    },
-    {
-      "id": 11,
-      "name": "On",
-      "type": "play",
-      "value": 1
-    },
-    {
-      "id": 12,
-      "name": "Open Chords",
-      "type": "boolean",
-      "value": 0.1
-    },
-    {
-      "id": 13,
-      "name": "Scale",
-      "type": "unipolar",
-      "value": 0.1
+      "id": 667,
+      "name": "Scales & Chords",
+      "params": [
+        {
+          "id": 1,
+          "name": "Add Color",
+          "type": "boolean",
+          "value": 0.1,
+        },
+        {
+          "id": 2,
+          "name": "Add Octave Down",
+          "type": "boolean",
+          "value": 0.2,
+        },
+        {
+          "id": 3,
+          "name": "Add Octave Up",
+          "type": "boolean",
+          "value": 0.3,
+        },
+        {
+          "id": 4,
+          "name": "Alter",
+          "type": "boolean",
+          "value": 0.4,
+        },
+        {
+          "id": 5,
+          "name": "Chords",
+          "type": "boolean",
+          "value": 0.5,
+        },
+        {
+          "id": 6,
+          "name": "Custom Scale",
+          "type": "unipolar",
+          "value": 0.6,
+        },
+        {
+          "id": 7,
+          "name": "Filter Notes",
+          "type": "boolean",
+          "value": 0.7,
+        },
+        {
+          "id": 8,
+          "name": "Inversion",
+          "type": "unipolar",
+          "value": 0.8,
+        },
+        {
+          "id": 9,
+          "name": "Key",
+          "type": "unipolar",
+          "value": 0.9,
+        },
+        {
+          "id": 10,
+          "name": "Nr of Notes",
+          "type": "unipolar",
+          "value": 1,
+        },
+        {
+          "id": 11,
+          "name": "On",
+          "type": "play",
+          "value": 1,
+        },
+        {
+          "id": 12,
+          "name": "Open Chords",
+          "type": "boolean",
+          "value": 0.1,
+        },
+        {
+          "id": 13,
+          "name": "Scale",
+          "type": "unipolar",
+          "value": 0.1,
+        },
+      ],
+      "patch": "My happy little scales and chords",
+      "type": "Player",
+      "vendor": "Reason Studios",
     }
-  ],
-  "patch": "My happy little scales and chords"
-}
-`.trim(),
-  "Given parameters from the Scales & Chords device, the device returned should be correct"
-);
+  `));
 
-assert(
-  JSON.stringify(
+test("Given parameters that are not from a known device, the device returned should be correct", () =>
+  expect(
     determineRackDevice(668, "Some stupid patch", [
       { name: "Blabla", value: 0.1, id: 1 },
       { name: "Blubb", value: 0.2, id: 2 },
       { name: "Rappatoff", value: 0.3, id: 3 },
-    ]),
-    null,
-    2
-  ) ===
-    `
-{
-  "id": 668,
-  "name": "Unknown Device",
-  "vendor": "Unknown",
-  "type": "Unknown",
-  "params": [
+    ])
+  ).toMatchInlineSnapshot(`
     {
-      "id": 1,
-      "name": "Blabla",
-      "type": "unipolar",
-      "value": 0.1
-    },
-    {
-      "id": 2,
-      "name": "Blubb",
-      "type": "unipolar",
-      "value": 0.2
-    },
-    {
-      "id": 3,
-      "name": "Rappatoff",
-      "type": "unipolar",
-      "value": 0.3
+      "id": 668,
+      "name": "Unknown Device",
+      "params": [
+        {
+          "id": 1,
+          "name": "Blabla",
+          "type": "unipolar",
+          "value": 0.1,
+        },
+        {
+          "id": 2,
+          "name": "Blubb",
+          "type": "unipolar",
+          "value": 0.2,
+        },
+        {
+          "id": 3,
+          "name": "Rappatoff",
+          "type": "unipolar",
+          "value": 0.3,
+        },
+      ],
+      "patch": "Some stupid patch",
+      "type": "Unknown",
+      "vendor": "Unknown",
     }
-  ],
-  "patch": "Some stupid patch"
-}
-`.trim(),
-  "Given parameters that are not from a known device, the device returned should be correct"
-);
+  `));

@@ -1,3 +1,4 @@
 .DS_Store
 .vscode
 .VSCodeCounter
+node_modules

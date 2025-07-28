@@ -1,4 +1,5 @@
 const determineRackDevice = require("./determineRackDevice");
+const determinePlayParam = require("./determinePlayParam");
 
 class VstManager {
   #devices = new Map();
@@ -6,6 +7,8 @@ class VstManager {
 
   #params = new Map();
   #currentParamId = 0;
+
+  #playParamId = null;
 
   #ignoredParamIds = new Set();
 
@@ -19,6 +22,8 @@ class VstManager {
     this.#currentParamId = 0;
 
     this.#ignoredParamIds.clear();
+
+    this.#playParamId = null;
   }
 
   addParam(rawParam) {
@@ -60,25 +65,9 @@ class VstManager {
     param.value = value;
   }
 
-  determineDevices() {
-    const paramsByPatch = {};
-
-    for (const param of this.#params.values()) {
-      if (!paramsByPatch[param.patch]) {
-        paramsByPatch[param.patch] = [];
-      }
-      paramsByPatch[param.patch].push(param);
-    }
-
-    for (const [patch, params] of Object.entries(paramsByPatch)) {
-      this.#currentDeviceId++;
-      const device = determineRackDevice(this.#currentDeviceId, patch, params);
-      for (const param of device.params) {
-        this.#params.set(param.id, param);
-      }
-      device.params = device.params.map((param) => param.id);
-      this.#devices.set(this.#currentDeviceId, device);
-    }
+  analyse() {
+    this.#determineDevices();
+    this.#determinePlayParam();
   }
 
   print() {
@@ -104,6 +93,31 @@ class VstManager {
   }
 
   #isIgnored = (value) => value.startsWith("Param ");
+
+  #determineDevices = () => {
+    const paramsByPatch = {};
+
+    for (const param of this.#params.values()) {
+      if (!paramsByPatch[param.patch]) {
+        paramsByPatch[param.patch] = [];
+      }
+      paramsByPatch[param.patch].push(param);
+    }
+
+    for (const [patch, params] of Object.entries(paramsByPatch)) {
+      this.#currentDeviceId++;
+      const device = determineRackDevice(this.#currentDeviceId, patch, params);
+      for (const param of device.params) {
+        this.#params.set(param.id, param);
+      }
+      device.params = device.params.map((param) => param.id);
+      this.#devices.set(this.#currentDeviceId, device);
+    }
+  };
+
+  #determinePlayParam = () => {
+    this.#playParamId = determinePlayParam(this.#devices);
+  };
 }
 
 module.exports = VstManager;
