@@ -112,6 +112,22 @@ class VstManager {
     }
   }
 
+  play(outlet) {
+    if (!this.#playParamId) {
+      post("No play param found in any device — cannot play\n");
+      return;
+    }
+    outlet(0, [this.#playParamId, 1]);
+  }
+
+  stop(outlet) {
+    if (!this.#playParamId) {
+      post("No play param found in any device — cannot stop\n");
+      return;
+    }
+    outlet(0, [this.#playParamId, 0]);
+  }
+
   #isIgnored = (value) => value.startsWith("Param ");
 
   #determineDevices = () => {
