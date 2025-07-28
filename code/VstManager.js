@@ -71,6 +71,7 @@ class VstManager {
   }
 
   print() {
+    const mps = {};
     for (const device of this.#devices.values()) {
       post(
         device.patch
@@ -85,10 +86,29 @@ class VstManager {
       post(`  Params:\n`);
       const params = device.params.map((id) => this.#params.get(id));
       for (const param of params) {
+        const isMasterPlaySwitch = param.id === this.#playParamId;
+        if (isMasterPlaySwitch) {
+          mps.patch = device.patch;
+          mps.name = device.name;
+          mps.byName = device.byName;
+          mps.paramName = param.name;
+        }
         post(`    ${param.name} = ${param.value}\n`);
         post(`      ID:   ${param.id}\n`);
-        post(`      Type: ${param.type}\n`);
+        post(
+          `      Type: ${param.type}${
+            isMasterPlaySwitch ? " (master play switch)" : ""
+          }\n`
+        );
       }
+    }
+    if (!this.#playParamId) {
+      post("No play param found in any device\n");
+    } else {
+      post(`Master Play Switch:\n`);
+      post(`  Patch:       ${mps.patch}\n`);
+      post(`  Device Name: ${mps.name}${mps.byName ? ` ${mps.byName}` : ""}\n`);
+      post(`  Param Name:  ${mps.paramName}\n`);
     }
   }
 
@@ -116,7 +136,7 @@ class VstManager {
   };
 
   #determinePlayParam = () => {
-    this.#playParamId = determinePlayParam(this.#devices);
+    this.#playParamId = determinePlayParam(this.#devices, this.#params);
   };
 }
 

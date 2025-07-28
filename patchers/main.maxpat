@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 2225.0, 1319.0 ],
+		"rect" : [ 1625.0, 164.0, 676.0, 581.0 ],
 		"openinpresentation" : 1,
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
@@ -134,7 +134,6 @@
 						"gridsize" : [ 10.0, 10.0 ],
 						"subpatcher_template" : "zapperment",
 						"integercoordinates" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-77",
@@ -1493,9 +1492,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1280.0, 2210.0, 132.0, 23.0 ],
+					"patching_rect" : [ 1280.0, 2210.0, 139.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "symbol BlackHole 64ch"
+					"text" : "symbol Scarlett 816 USB"
 				}
 
 			}
@@ -2432,7 +2431,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1658.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1"
+					"text" : "274"
 				}
 
 			}
@@ -2457,7 +2456,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1690.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1"
+					"text" : "2"
 				}
 
 			}
@@ -2507,7 +2506,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1870.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "0."
+					"text" : "524715."
 				}
 
 			}
@@ -2532,7 +2531,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1838.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "0"
+					"text" : "1"
 				}
 
 			}
@@ -2632,7 +2631,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1090.0, 1718.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "0."
+					"text" : "75."
 				}
 
 			}
@@ -3856,7 +3855,6 @@
 					"angle" : 270.0,
 					"bgcolor" : [ 0.129411764705882, 1.0, 0.023529411764706, 1.0 ],
 					"bordercolor" : [ 0.357, 0.514, 0.863, 1.0 ],
-					"hidden" : 1,
 					"id" : "obj-17",
 					"maxclass" : "panel",
 					"mode" : 0,
@@ -3902,6 +3900,7 @@
 					"angle" : 270.0,
 					"bgcolor" : [ 0.356862745098039, 0.513725490196078, 0.862745098039216, 0.25 ],
 					"bordercolor" : [ 0.357, 0.514, 0.863, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-227",
 					"maxclass" : "panel",
 					"mode" : 0,
@@ -7006,6 +7005,13 @@
 			}
 , 			{
 				"name" : "constants.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "determinePlayParam.js",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

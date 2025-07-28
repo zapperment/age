@@ -11,15 +11,16 @@ const deviceNamesByPriority = [
   "Quad Note Generator",
 ];
 
-function determinePlayParam(devices) {
+function determinePlayParam(devices, params) {
   for (const deviceName of deviceNamesByPriority) {
     for (const device of devices.values()) {
       if (device.name === deviceName) {
-        const playParam = device.params.find(
-          (param) => param.type === paramType.play
-        );
+        const playParam = device.params.find((paramId) => {
+          const param = params.get(paramId);
+          return param && param.type === paramType.play;
+        });
         if (playParam) {
-          return playParam.id;
+          return playParam;
         }
       }
     }
