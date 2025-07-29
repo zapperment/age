@@ -39,7 +39,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 220.0, 150.0, 51.0, 23.0 ],
-					"presentation_linecount" : 2,
 					"style" : "rnbodefault",
 					"text" : "initialise"
 				}
@@ -63,9 +62,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 190.0, 330.0, 94.0, 23.0 ],
-					"text" : "experimentalVst"
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 190.0, 330.0, 77.0, 23.0 ],
+					"text" : "vstController"
 				}
 
 			}
