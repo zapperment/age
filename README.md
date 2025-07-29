@@ -1,3 +1,3 @@
-# AGE
+# The Age of Reason
 
-**The Age of Reason**
+**Live performance app for the Reason Rack**

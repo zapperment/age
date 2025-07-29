@@ -1,0 +1,22 @@
+{
+  "name": "age-of-reason",
+  "version": "0.0.1-beta.1",
+  "description": "Live performance app for the Reason Rack",
+  "homepage": "https://github.com/zapperment/age#readme",
+  "bugs": {
+    "url": "https://github.com/zapperment/age/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zapperment/age.git"
+  },
+  "license": "ISC",
+  "author": "Patrick Hund",
+  "type": "commonjs",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
