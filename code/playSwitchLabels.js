@@ -9,6 +9,7 @@ module.exports = [
   "PATTERN",
   "PLAY / STOP",
   "PLAY PATTERN",
+  "{PLAY}",
   "PLAY",
   "PLAYER",
   "Pattern ON",

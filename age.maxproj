@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836627344,
-	"viewrect" : [ 1526.0, 127.0, 971.0, 976.0 ],
+	"modificationdate" : 3836639593,
+	"viewrect" : [ 2903.0, 632.0, 411.0, 538.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -32,12 +32,12 @@
 				"local" : 1
 			}
 ,
-			"simPadController.maxpat" : 			{
+			"vstController.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"vstController.maxpat" : 			{
+			"simPadController.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -115,17 +115,17 @@
 				"local" : 1
 			}
 ,
+			"padIndexToClipIndex.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"playSwitchLabels.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
 			"rackDevices.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"padIndexToClipIndex.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
