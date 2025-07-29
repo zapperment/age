@@ -1,7 +1,7 @@
 {
   "name": "age-of-reason",
-  "version": "0.0.1",
-  "description": "Music live performance application",
+  "version": "0.0.1-beta.1",
+  "description": "Live performance app for the Reason Rack",
   "homepage": "https://github.com/zapperment/age#readme",
   "bugs": {
     "url": "https://github.com/zapperment/age/issues"
