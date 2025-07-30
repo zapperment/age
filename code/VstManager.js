@@ -8,7 +8,7 @@ class VstManager {
   #params = new Map();
   #currentParamId = 0;
 
-  #playParamId = null;
+  #mainPlaySwitchParamId = null;
 
   #ignoredParamIds = new Set();
 
@@ -23,7 +23,7 @@ class VstManager {
 
     this.#ignoredParamIds.clear();
 
-    this.#playParamId = null;
+    this.#mainPlaySwitchParamId = null;
   }
 
   addParam(rawParam) {
@@ -86,8 +86,8 @@ class VstManager {
       post(`  Params:\n`);
       const params = device.params.map((id) => this.#params.get(id));
       for (const param of params) {
-        const isMasterPlaySwitch = param.id === this.#playParamId;
-        if (isMasterPlaySwitch) {
+        const isMainPlaySwitch = param.id === this.#mainPlaySwitchParamId;
+        if (isMainPlaySwitch) {
           mps.patch = device.patch;
           mps.name = device.name;
           mps.byName = device.byName;
@@ -97,35 +97,35 @@ class VstManager {
         post(`      ID:   ${param.id}\n`);
         post(
           `      Type: ${param.type}${
-            isMasterPlaySwitch ? " (master play switch)" : ""
+            isMainPlaySwitch ? " (main play switch)" : ""
           }\n`
         );
       }
     }
-    if (!this.#playParamId) {
+    if (!this.#mainPlaySwitchParamId) {
       post("No play param found in any device\n");
     } else {
-      post(`Master Play Switch:\n`);
-      post(`  Patch:       ${mps.patch}\n`);
-      post(`  Device Name: ${mps.name}${mps.byName ? ` ${mps.byName}` : ""}\n`);
-      post(`  Param Name:  ${mps.paramName}\n`);
+      post(`Main Play Switch:\n`);
+      post(`  Patch:  ${mps.patch}\n`);
+      post(`  Device: ${mps.name}${mps.byName ? ` ${mps.byName}` : ""}\n`);
+      post(`  Param:  ${mps.paramName}\n`);
     }
   }
 
   play(outlet) {
-    if (!this.#playParamId) {
+    if (!this.#mainPlaySwitchParamId) {
       post("No play param found in any device — cannot play\n");
       return;
     }
-    outlet(0, [this.#playParamId, 1]);
+    outlet(0, [this.#mainPlaySwitchParamId, 1]);
   }
 
   stop(outlet) {
-    if (!this.#playParamId) {
+    if (!this.#mainPlaySwitchParamId) {
       post("No play param found in any device — cannot stop\n");
       return;
     }
-    outlet(0, [this.#playParamId, 0]);
+    outlet(0, [this.#mainPlaySwitchParamId, 0]);
   }
 
   #isIgnored = (value) => value.startsWith("Param ");
@@ -152,7 +152,10 @@ class VstManager {
   };
 
   #determinePlayParam = () => {
-    this.#playParamId = determinePlayParam(this.#devices, this.#params);
+    this.#mainPlaySwitchParamId = determinePlayParam(
+      this.#devices,
+      this.#params
+    );
   };
 }
 
