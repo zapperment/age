@@ -34,14 +34,14 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.501957416534424, 0.501942336559296, 0.014744100160897, 1.0 ],
+					"color" : [ 0.501966595649719, 0.001555800437927, 0.9985111951828, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 90.0, 107.0, 23.0 ],
-					"text" : "receive appStartup"
+					"patching_rect" : [ 30.0, 90.0, 101.0, 23.0 ],
+					"text" : "receive appReady"
 				}
 
 			}
