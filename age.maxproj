@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836709082,
-	"viewrect" : [ 1196.0, 324.0, 411.0, 538.0 ],
+	"modificationdate" : 3836830145,
+	"viewrect" : [ 860.0, 187.0, 1720.0, 1119.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -15,6 +15,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"fromUserDir.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 ,
 			"initialiseUI.maxpat" : 			{
@@ -85,11 +90,6 @@
 				"local" : 1
 			}
 ,
-			"clipIndexToPadIndex.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
 			"constants.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -115,11 +115,6 @@
 				"local" : 1
 			}
 ,
-			"padIndexToClipIndex.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
 			"playSwitchLabels.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
@@ -134,6 +129,16 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
+,
+			"padIdToLaunchpadIndex.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"launchpadIndexToPadId.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
 
 		}
 ,
@@ -142,28 +147,8 @@
 				"kind" : "maxsnapshot",
 				"local" : 1,
 				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
-			}
-,
-			"reason-rack-2.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
-			}
-,
-			"reason-rack-9.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+					"bootpath" : "~/.Trash/Age 13.02.32",
+					"projectrelativepath" : "../../../../.Trash/Age 13.02.32"
 				}
 
 			}
@@ -183,139 +168,89 @@
 				"local" : 1
 			}
 ,
-			"initialState.json" : 			{
-				"kind" : "json",
-				"local" : 1
-			}
-,
 			"reason-rack-10.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-11.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-12.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-13.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-14.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-15.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-16.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
+			}
+,
+			"reason-rack-2.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
 			}
 ,
 			"reason-rack-3.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-4.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-5.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-6.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-7.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
 			}
 ,
 			"reason-rack-8.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Music/Zapperment/Age",
-					"projectrelativepath" : "../../../../Music/Zapperment/Age"
-				}
-
+				"local" : 1
+			}
+,
+			"reason-rack-9.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1
+			}
+,
+			"example-state.json" : 			{
+				"kind" : "json",
+				"local" : 1
+			}
+,
+			"initial-state.json" : 			{
+				"kind" : "json",
+				"local" : 1
 			}
 
 		}

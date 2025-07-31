@@ -1,0 +1,302 @@
+{
+  "pads": {
+    "1": {
+      "state": "stopped",
+      "clip": {
+        "label": "Bassline subdued",
+        "rackId": "1",
+        "controlSettings": [0, 0.1, 0.8, 0.54, 0, 0.99, 1, 0.333],
+        "switchSettings": [0, 0, 0, 1, 1, 0, 1, 0]
+      }
+    },
+    "2": { "state": "empty" },
+    "3": { "state": "empty" },
+    "4": { "state": "empty" },
+    "5": { "state": "empty" },
+    "6": { "state": "empty" },
+    "7": { "state": "empty" },
+    "8": { "state": "empty" },
+    "9": { "state": "empty" },
+    "10": { "state": "empty" },
+    "11": { "state": "empty" },
+    "12": { "state": "empty" },
+    "13": { "state": "empty" },
+    "14": { "state": "empty" },
+    "15": { "state": "empty" },
+    "16": { "state": "empty" },
+    "17": { "state": "empty" },
+    "18": { "state": "empty" },
+    "19": { "state": "empty" },
+    "20": { "state": "empty" },
+    "21": { "state": "empty" },
+    "22": { "state": "empty" },
+    "23": { "state": "empty" },
+    "24": { "state": "empty" },
+    "25": { "state": "empty" },
+    "26": { "state": "empty" },
+    "27": { "state": "empty" },
+    "28": { "state": "empty" },
+    "29": { "state": "empty" },
+    "30": { "state": "empty" },
+    "31": { "state": "empty" },
+    "32": { "state": "empty" },
+    "33": { "state": "empty" },
+    "34": { "state": "empty" },
+    "35": { "state": "empty" },
+    "36": { "state": "empty" },
+    "37": { "state": "empty" },
+    "38": { "state": "empty" },
+    "39": { "state": "empty" },
+    "40": { "state": "empty" },
+    "41": { "state": "empty" },
+    "42": { "state": "empty" },
+    "43": { "state": "empty" },
+    "44": { "state": "empty" },
+    "45": { "state": "empty" },
+    "46": { "state": "empty" },
+    "47": { "state": "empty" },
+    "48": { "state": "empty" },
+    "49": { "state": "empty" },
+    "50": { "state": "empty" },
+    "51": { "state": "empty" },
+    "52": { "state": "empty" },
+    "53": { "state": "empty" },
+    "54": { "state": "empty" },
+    "55": { "state": "empty" },
+    "56": { "state": "empty" },
+    "57": { "state": "empty" },
+    "58": { "state": "empty" },
+    "59": { "state": "empty" },
+    "60": { "state": "empty" },
+    "61": { "state": "empty" },
+    "62": { "state": "empty" },
+    "63": { "state": "empty" },
+    "64": { "state": "empty" }
+  },
+  "racks": {
+    "1": {
+      "label": "Brutalo Bass",
+      "colourId": "1",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "2": {
+      "label": "Emtpy Rack 2",
+      "colourId": "2",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "3": {
+      "label": "Emtpy Rack 3",
+      "colourId": "3",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "4": {
+      "label": "Emtpy Rack 4",
+      "colourId": "4",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "5": {
+      "label": "Emtpy Rack 5",
+      "colourId": "5",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "6": {
+      "label": "Emtpy Rack 6",
+      "colourId": "6",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "7": {
+      "label": "Emtpy Rack 7",
+      "colourId": "7",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "8": {
+      "label": "Emtpy Rack 8",
+      "colourId": "8",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "9": {
+      "label": "Emtpy Rack 9",
+      "colourId": "9",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "10": {
+      "label": "Emtpy Rack 10",
+      "colourId": "10",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "11": {
+      "label": "Emtpy Rack 11",
+      "colourId": "11",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "12": {
+      "label": "Emtpy Rack 12",
+      "colourId": "12",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "13": {
+      "label": "Emtpy Rack 13",
+      "colourId": "13",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "14": {
+      "label": "Emtpy Rack 14",
+      "colourId": "14",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "15": {
+      "label": "Emtpy Rack 15",
+      "colourId": "15",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "16": {
+      "label": "Emtpy Rack 16",
+      "colourId": "16",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "17": {
+      "label": "Emtpy Rack 17",
+      "colourId": "17",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "18": {
+      "label": "Emtpy Rack 18",
+      "colourId": "18",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "19": {
+      "label": "Emtpy Rack 19",
+      "colourId": "19",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "20": {
+      "label": "Emtpy Rack 20",
+      "colourId": "20",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "21": {
+      "label": "Emtpy Rack 21",
+      "colourId": "21",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "22": {
+      "label": "Emtpy Rack 22",
+      "colourId": "22",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "23": {
+      "label": "Emtpy Rack 23",
+      "colourId": "23",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "24": {
+      "label": "Emtpy Rack 24",
+      "colourId": "24",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "25": {
+      "label": "Emtpy Rack 25",
+      "colourId": "25",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "26": {
+      "label": "Emtpy Rack 26",
+      "colourId": "26",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "27": {
+      "label": "Emtpy Rack 27",
+      "colourId": "27",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "28": {
+      "label": "Emtpy Rack 28",
+      "colourId": "28",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "29": {
+      "label": "Emtpy Rack 29",
+      "colourId": "29",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "30": {
+      "label": "Emtpy Rack 30",
+      "colourId": "30",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "31": {
+      "label": "Emtpy Rack 31",
+      "colourId": "31",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    "32": {
+      "label": "Emtpy Rack 32",
+      "colourId": "32",
+      "mainPlaySwitch": 114,
+      "controls": [8, 9, 10, 11, 12, 13, 14, 15],
+      "switches": [16, 17, 18, 19, 20, 21, 22, 23]
+    }
+  }
+}

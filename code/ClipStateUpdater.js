@@ -1,44 +1,47 @@
-const { numberOfClips, clipState } = require("./constants");
+const { numberOfPads, clipState } = require("./constants");
 const PadMidiSender = require("./PadMidiSender");
 const SimPadControlSender = require("./SimPadControlSender");
 const RackToggler = require("./RackToggler");
 const ClipTriggerCalculator = require("./ClipTriggerCalculator");
 
 module.exports = class ClipStateUpdater {
-  #clips;
+  #state;
   #clipTriggerCalculator;
   #padMidiSender;
   #simPadControlSender;
   #rackToggler;
 
-  constructor({ clips, colours, ctqBeats }) {
-    this.#clips = clips;
+  constructor({ state, colours, ctqBeats }) {
+    this.#state = state;
     this.#clipTriggerCalculator = new ClipTriggerCalculator({ ctqBeats });
-    this.#padMidiSender = new PadMidiSender({ clips, colours });
-    this.#simPadControlSender = new SimPadControlSender({ clips });
-    this.#rackToggler = new RackToggler({ clips });
+    this.#padMidiSender = new PadMidiSender({ state, colours });
+    this.#simPadControlSender = new SimPadControlSender({ state, colours });
+    this.#rackToggler = new RackToggler({ state });
   }
 
   fire(outlet) {
-    for (let clipIndex = 0; clipIndex < numberOfClips; clipIndex++) {
-      const currentState = this.#clips.get(clipIndex).get("state");
+    for (let padId = 1; padId <= numberOfPads; padId++) {
+      const currentState = this.#state.get(`pads::${padId}::state`);
+      if (currentState === clipState.EMPTY) {
+        continue;
+      }
       let nextState = currentState;
       switch (currentState) {
         case clipState.TRIGGERED:
           nextState = clipState.PLAYING;
-          post(`Clip ${clipIndex + 1} has started\n`);
+          post(`Clip in pad ${padId} has started\n`);
           break;
         case clipState.STOPPING:
           nextState = clipState.STOPPED;
-          post(`Clip ${clipIndex + 1} has stopped\n`);
+          post(`Clip in pad ${padId} has stopped\n`);
           break;
         default:
       }
       if (nextState !== currentState) {
-        this.#clips.replace(`${clipIndex}::state`, nextState);
-        this.#padMidiSender.send(clipIndex, outlet);
-        this.#simPadControlSender.send(clipIndex, outlet);
-        this.#rackToggler.send(clipIndex, outlet);
+        this.#state.replace(`pads::${padId}::state`, nextState);
+        this.#padMidiSender.send(padId, outlet);
+        this.#simPadControlSender.send(padId, outlet);
+        this.#rackToggler.send(padId, outlet);
       }
     }
   }

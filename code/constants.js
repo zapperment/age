@@ -42,7 +42,7 @@ module.exports = {
   beatLampColours: [21, 21, 21, 21, 21, 13, 13, 5],
   beatsPerBar: 4, // todo: make this configurable
   numberOfBeatLamps: 8,
-  numberOfClips: 64,
+  numberOfPads: 64,
   defaultMidiOutletIndex: 0,
   defaultSimPadControlOutletIndex: 1,
   defaultRackTogglerOutletIndex: 2,
