@@ -92,6 +92,7 @@ class VstManager {
           mps.name = device.name;
           mps.byName = device.byName;
           mps.paramName = param.name;
+          mps.paramId = param.id;
         }
         post(`    ${param.name} = ${param.value}\n`);
         post(`      ID:   ${param.id}\n`);
@@ -108,7 +109,7 @@ class VstManager {
       post(`Main Play Switch:\n`);
       post(`  Patch:  ${mps.patch}\n`);
       post(`  Device: ${mps.name}${mps.byName ? ` ${mps.byName}` : ""}\n`);
-      post(`  Param:  ${mps.paramName}\n`);
+      post(`  Param:  ${mps.paramName} (${mps.paramId})\n`);
     }
   }
 

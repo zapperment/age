@@ -1,25 +1,24 @@
 const { defaultRackTogglerOutletIndex, clipState } = require("./constants");
 
 module.exports = class RackToggler {
-  #clips;
+  #state;
   #outletIndex;
 
-  constructor({ clips, outletIndex }) {
+  constructor({ state, outletIndex }) {
     this.#outletIndex = outletIndex || defaultRackTogglerOutletIndex;
-    this.#clips = clips;
+    this.#state = state;
   }
 
-  send(clipIndex, outlet) {
-    const clip = this.#clips.get(clipIndex);
-    const state = clip.get("state");
+  send(padId, outlet) {
+    const state = this.#state.get(`pads::${padId}::state`);
     switch (state) {
       case clipState.STOPPING:
       case clipState.PLAYING:
-        outlet(this.#outletIndex, [clipIndex, 1]);
+        outlet(this.#outletIndex, [padId, 1]);
         break;
       case clipState.TRIGGERED:
       case clipState.STOPPED:
-        outlet(this.#outletIndex, [clipIndex, 0]);
+        outlet(this.#outletIndex, [padId, 0]);
         break;
       default:
     }
