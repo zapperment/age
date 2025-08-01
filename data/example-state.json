@@ -1,4 +1,5 @@
 {
+  "mode": "performance",
   "pads": {
     "1": {
       "state": "stopped",
