@@ -17,28 +17,6 @@ module.exports = {
     PULSE: 2,
   },
   padCC: 176,
-  colour: {
-    COAL: {
-      launchPad: 0,
-      hex: "#000000",
-      rgb: [0, 0, 0],
-    },
-    HUBBA_BUBBA: {
-      launchPad: 4,
-      hex: "#FF6E82",
-      rgb: [1, 0.431, 0.51],
-    },
-    PUMPKIN: {
-      launchPad: 10,
-      hex: "#EA5807",
-      rgb: [0.916, 0.345, 0.027],
-    },
-    MUSTARD: {
-      launchPad: 14,
-      hex: "#ADAD06",
-      rgb: [0.678, 0.678, 0.025],
-    },
-  },
   beatLampColours: [21, 21, 21, 21, 21, 13, 13, 5],
   beatsPerBar: 4, // todo: make this configurable
   numberOfBeatLamps: 8,

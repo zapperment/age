@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836830145,
-	"viewrect" : [ 860.0, 187.0, 1720.0, 1119.0 ],
+	"modificationdate" : 3836922491,
+	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -22,12 +22,22 @@
 				"local" : 1
 			}
 ,
+			"ifShifted.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"initialiseUI.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"updatePlayButton.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rackConfig.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -105,12 +115,22 @@
 				"local" : 1
 			}
 ,
+			"padIdToLaunchpadIndex.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"isCombinatorDevice.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
 			"isPlaySwitch.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"launchpadIndexToPadId.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -129,16 +149,6 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
-,
-			"padIdToLaunchpadIndex.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"launchpadIndexToPadId.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
 
 		}
 ,
@@ -147,8 +157,158 @@
 				"kind" : "maxsnapshot",
 				"local" : 1,
 				"singleton" : 				{
-					"bootpath" : "~/.Trash/Age 13.02.32",
-					"projectrelativepath" : "../../../../.Trash/Age 13.02.32"
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-10.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-11.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-12.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-13.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-14.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-15.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-16.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-2.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-3.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-4.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-5.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-6.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-7.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-8.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
+				}
+
+			}
+,
+			"reason-rack-9.maxsnap" : 			{
+				"kind" : "maxsnapshot",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Music/Zapperment/Age",
+					"projectrelativepath" : "../../../../Music/Zapperment/Age"
 				}
 
 			}
@@ -165,81 +325,6 @@
 ,
 			"colours.json" : 			{
 				"kind" : "json",
-				"local" : 1
-			}
-,
-			"reason-rack-10.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-11.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-12.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-13.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-14.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-15.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-16.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-2.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-3.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-4.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-5.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-6.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-7.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-8.maxsnap" : 			{
-				"kind" : "maxsnapshot",
-				"local" : 1
-			}
-,
-			"reason-rack-9.maxsnap" : 			{
-				"kind" : "maxsnapshot",
 				"local" : 1
 			}
 ,
