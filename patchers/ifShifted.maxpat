@@ -23,38 +23,76 @@
 		"title" : "age:utils:isShifted",
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 340.0, 120.0, 29.5, 23.0 ],
+					"style" : "rnbodefault",
+					"text" : "0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 350.0, 20.0, 150.0, 35.0 ],
+					"text" : "initially, shift key / pad is not pressed down"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.501957416534424, 0.501942336559296, 0.014744100160897, 1.0 ],
+					"id" : "obj-333",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 350.0, 60.0, 107.0, 23.0 ],
+					"text" : "receive appStartup"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "Messages from inlet come out of this outlet if shift key / pad is NOT currently pressed down",
 					"id" : "obj-3",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 490.0, 560.0, 30.0, 30.0 ]
+					"patching_rect" : [ 450.0, 590.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "Messages from inlet come out of this outlet if shift key / pad IS currently pressed down",
 					"id" : "obj-2",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 570.0, 560.0, 30.0, 30.0 ]
+					"patching_rect" : [ 550.0, 590.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "Pass anything you want to be routed to one of the two outlets",
 					"id" : "obj-1",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 590.0, 40.0, 30.0, 30.0 ]
+					"patching_rect" : [ 530.0, 30.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -65,7 +103,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 450.0, 190.0, 86.0, 23.0 ],
+					"patching_rect" : [ 440.0, 340.0, 86.0, 23.0 ],
 					"style" : "rnbodefault",
 					"text" : "disconnect 0 0"
 				}
@@ -78,7 +116,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 400.0, 150.0, 60.0, 23.0 ],
+					"patching_rect" : [ 390.0, 250.0, 60.0, 23.0 ],
 					"text" : "bangbang"
 				}
 
@@ -90,7 +128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 370.0, 190.0, 71.0, 23.0 ],
+					"patching_rect" : [ 360.0, 340.0, 71.0, 23.0 ],
 					"style" : "rnbodefault",
 					"text" : "connect 0 1"
 				}
@@ -103,7 +141,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 270.0, 190.0, 86.0, 23.0 ],
+					"patching_rect" : [ 260.0, 340.0, 86.0, 23.0 ],
 					"style" : "rnbodefault",
 					"text" : "disconnect 0 1"
 				}
@@ -116,7 +154,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 220.0, 150.0, 60.0, 23.0 ],
+					"patching_rect" : [ 210.0, 250.0, 60.0, 23.0 ],
 					"text" : "bangbang"
 				}
 
@@ -128,7 +166,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 360.0, 100.0, 57.0, 23.0 ],
+					"patching_rect" : [ 310.0, 190.0, 57.0, 23.0 ],
 					"text" : "route 0 1"
 				}
 
@@ -141,7 +179,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 0.0, 86.0, 23.0 ],
+					"patching_rect" : [ 140.0, 30.0, 86.0, 23.0 ],
 					"text" : "receive shifted"
 				}
 
@@ -153,7 +191,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 190.0, 190.0, 71.0, 23.0 ],
+					"patching_rect" : [ 180.0, 340.0, 71.0, 23.0 ],
 					"style" : "rnbodefault",
 					"text" : "connect 0 0"
 				}
@@ -166,7 +204,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 550.0, 260.0, 61.0, 23.0 ],
+					"patching_rect" : [ 490.0, 470.0, 61.0, 23.0 ],
 					"text" : "router 1 2"
 				}
 
@@ -178,7 +216,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 30.0, 320.0, 130.0, 23.0 ],
+					"patching_rect" : [ 70.0, 170.0, 130.0, 23.0 ],
 					"text" : "print shifted @popup 1"
 				}
 
@@ -188,6 +226,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-334", 1 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-333", 0 ]
 				}
 
 			}
@@ -215,7 +260,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-356", 0 ],
-					"order" : 0,
 					"source" : [ "obj-337", 0 ]
 				}
 
@@ -223,7 +267,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-51", 0 ],
-					"order" : 1,
+					"disabled" : 1,
 					"source" : [ "obj-337", 0 ]
 				}
 
@@ -291,20 +335,14 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-356", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
-,
-			"inherited_shortname" : 1
-		}
-,
+ ],
 		"dependency_cache" : [  ],
 		"autosave" : 0,
 		"styles" : [ 			{
