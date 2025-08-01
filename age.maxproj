@@ -2,7 +2,7 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836914406,
+	"modificationdate" : 3836922491,
 	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -18,6 +18,11 @@
 			}
 ,
 			"fromUserDir.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"ifShifted.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -48,11 +53,6 @@
 			}
 ,
 			"simPadController.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"ifShifted.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
