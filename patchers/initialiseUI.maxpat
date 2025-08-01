@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1504.0, 87.0, 1402.0, 1319.0 ],
+		"rect" : [ 343.0, 87.0, 2872.0, 1319.0 ],
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
 		"gridsnaponopen" : 2,
@@ -45,7 +45,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "const { clipState } = require(\"constants\");\r\nconst padIdToLaunchpadIndex = require(\"padIdToLaunchpadIndex\");\r\n\t\r\nthis.inlets = 1;\r\nthis.outlets = 2;\r\n\r\nconst state = new Dict(\"state\");\r\nconst colours = new Dict(\"colours\");\r\n\r\nfunction bang() {\r\n\tfor (let padId = 1; padId <= 64; padId++) {\r\n\t\tconst padState = state.get(`pads::${padId}::state`);\r\n\t\tif (padState === clipState.EMPTY) {\r\n\t\t\tcontinue;\r\n\t\t}\r\n\t\tconst rackId = state.get(`pads::${padId}::clip::rackId`);\r\n\t\tconst colourId = state.get(`racks::${rackId}::colourId`);\r\n\t\tconst launchpadColourIndex = colours.get(`${colourId}::lp`);\r\n\t\tconst colourRgb = colours.get(`${colourId}::rgb`);\r\n\t\tconst launchpadIndex = padIdToLaunchpadIndex(padId);\r\n\t\toutlet(0, [ 144, launchpadIndex, launchpadColourIndex ]);\r\n\t\toutlet(1, [ padId, \"colour\", ...colourRgb]);\r\n\t}\r\n}",
+					"code" : "const { clipState } = require(\"constants\");\r\nconst padIdToLaunchpadIndex = require(\"padIdToLaunchpadIndex\");\r\n\t\r\nthis.inlets = 1;\r\nthis.outlets = 2;\r\n\r\nconst state = new Dict(\"state\");\r\nconst colours = new Dict(\"colours\");\r\n\r\nfunction bang() {\r\n\tfor (let padId = 1; padId <= 64; padId++) {\r\n\t\tconst padState = state.get(`pads::${padId}::state`);\r\n\t\tconst launchpadIndex = padIdToLaunchpadIndex(padId);\r\n\t\tif (padState === clipState.EMPTY) {\r\n\t\t\toutlet(0, [ 144, launchpadIndex, colours.get(`black::lp`) ]);\r\n\t\t\toutlet(1, [ padId, \"empty\" ]);\r\n\t\t\tcontinue;\r\n\t\t}\r\n\t\tconst rackId = state.get(`pads::${padId}::clip::rackId`);\r\n\t\tconst colourId = state.get(`racks::${rackId}::colourId`);\r\n\t\tconst launchpadColourIndex = colours.get(`${colourId}::lp`);\r\n\t\tconst colourRgb = colours.get(`${colourId}::rgb`);\r\n\t\toutlet(0, [ 144, launchpadIndex, launchpadColourIndex ]);\r\n\t\toutlet(1, [ padId, \"colour\", ...colourRgb]);\r\n\t}\r\n}",
 					"filename" : "none",
 					"fontface" : 0,
 					"fontname" : "<Monospaced>",
@@ -55,7 +55,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 10.000000298023224, 310.00000923871994, 489.999999701976776, 339.99999076128006 ],
+					"patching_rect" : [ 10.000000298023224, 310.00000923871994, 489.999999701976776, 439.99999076128006 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
