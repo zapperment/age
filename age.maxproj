@@ -2,7 +2,7 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836922491,
+	"modificationdate" : 3837077744,
 	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -33,6 +33,11 @@
 			}
 ,
 			"updatePlayButton.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"isMode.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
