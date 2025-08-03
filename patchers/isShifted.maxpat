@@ -17,7 +17,7 @@
 		"gridsnaponopen" : 2,
 		"objectsnaponopen" : 0,
 		"description" : "Utility method to route incoming signal depending on the shift key being depressed or not",
-		"digest" : "ifShifted Utility",
+		"digest" : "isShifted Utility",
 		"style" : "rnbodefault",
 		"subpatcher_template" : "zapperment",
 		"title" : "age:utils:isShifted",
