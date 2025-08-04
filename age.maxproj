@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3837078134,
-	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
+	"modificationdate" : 3837146190,
+	"viewrect" : [ 252.0, 200.0, 1008.0, 648.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -38,6 +38,11 @@
 			}
 ,
 			"rackConfig.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rackButton.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -146,11 +151,6 @@
 			}
 ,
 			"rackDevices.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"colours.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

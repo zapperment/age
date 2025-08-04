@@ -26,7 +26,6 @@ module.exports = {
   defaultRackTogglerOutletIndex: 2,
   ppq: 480, // resolution of the Max/MSP clock; 480 ticks per quarter note
   metroInterval: 15, // metro interval in ticks
-  placeholderParam: "*",
   unknownDevice: {
     name: "Unknown Device",
     vendor: "Unknown",

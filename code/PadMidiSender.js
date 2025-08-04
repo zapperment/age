@@ -24,6 +24,7 @@ module.exports = class PadMidiSender {
     const colourId = this.#state.get(`racks::${rackId}::colourId`);
     const lpColourIndex = this.#colours.get(`${colourId}::lp`);
     const launchpadIndex = padIdToLaunchpadIndex(padId);
+    post(`Pad MIDI sender state ${currentState}\n`);
     switch (currentState) {
       case clipState.TRIGGERED:
       case clipState.STOPPING:
