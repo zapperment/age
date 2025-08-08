@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1040.0, 259.0, 1010.0, 1100.0 ],
+		"rect" : [ 814.0, 253.0, 1010.0, 1100.0 ],
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
 		"gridsnaponopen" : 2,
@@ -60,7 +60,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Returns input if current mode matches argument 1",
+					"comment" : "Returns input if current mode does NOT patch argument 1",
 					"id" : "obj-7",
 					"index" : 2,
 					"maxclass" : "outlet",

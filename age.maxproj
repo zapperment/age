@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3837146190,
-	"viewrect" : [ 252.0, 200.0, 1008.0, 648.0 ],
+	"modificationdate" : 3837340741,
+	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -37,12 +37,17 @@
 				"local" : 1
 			}
 ,
-			"rackConfig.maxpat" : 			{
+			"isShifted.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
 			"rackButton.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rackConfig.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -58,11 +63,6 @@
 			}
 ,
 			"simPadController.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"isShifted.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
