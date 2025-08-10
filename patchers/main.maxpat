@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 87.0, 2379.0, 1319.0 ],
+		"rect" : [ 894.0, 87.0, 1652.0, 1319.0 ],
 		"openinpresentation" : 1,
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
@@ -30,7 +30,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5110.0, 220.0, 163.0, 64.0 ],
-					"presentation_linecount" : 4,
 					"text" : "if shift key / pad IS currently pressed down, hits on pads trigger rack setup mode for the pad that was hit",
 					"textjustification" : 2
 				}
@@ -53,7 +52,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5060.0, 800.0, 141.0, 23.0 ],
+					"patching_rect" : [ 5080.0, 710.0, 141.0, 23.0 ],
 					"text" : "print spcFromPadHitProc"
 				}
 
@@ -89,7 +88,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5140.0, 120.0, 130.0, 64.0 ],
+					"patching_rect" : [ 5140.0, 120.0, 132.0, 64.0 ],
 					"text" : "only trigger clips or enter rack config mode when currently in performance mode"
 				}
 
@@ -296,8 +295,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 
@@ -617,6 +614,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 
@@ -3406,7 +3405,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1238.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "21"
+					"text" : "194"
 				}
 
 			}
@@ -3431,7 +3430,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1270.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "2"
+					"text" : "1"
 				}
 
 			}
@@ -3481,7 +3480,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1450.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "39225."
+					"text" : "370800."
 				}
 
 			}
@@ -3606,7 +3605,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1298.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "345."
+					"text" : "240."
 				}
 
 			}
@@ -3631,7 +3630,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3140.0, 240.0, 110.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1 stopped"
+					"text" : "1 playing"
 				}
 
 			}
@@ -3654,7 +3653,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5200.0, 640.0, 113.0, 23.0 ],
+					"patching_rect" : [ 5240.0, 710.0, 113.0, 23.0 ],
 					"text" : "send simPadControl"
 				}
 
@@ -6049,7 +6048,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.579999983310699, 0.119999997317791, 0.129999995231628, 1.0 ],
+					"bgcolor" : [ 0.579999983310699, 0.119999997317791, 0.129999995231628, 0.899999976158142 ],
 					"border" : 1,
 					"bordercolor" : [ 0.357, 0.514, 0.863, 1.0 ],
 					"id" : "obj-163",
@@ -6169,7 +6168,7 @@
 					"bgfillcolor_proportion" : 0.39,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-129",
-					"items" : [ "AU DLS Synth 1", ",", "IAC Router to Reason 1", ",", "IAC Router to Reason 2", ",", "IAC Router to Reason 3", ",", "IAC Router to Reason 4", ",", "IAC Live to Router", ",", "IAC Live to Reason", ",", "IAC Stream Deck to Traktor", ",", "IAC Traktor to Stream Deck", ",", "IAC Bome to Reason", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW", ",", "Launchpad Mini MK3 LPMiniMK3 DAW In", ",", "Launchpad Mini MK3 LPMiniMK3 MIDI In", ",", "Scarlett 8i6 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "IAC Router to Reason 1", ",", "IAC Router to Reason 2", ",", "IAC Router to Reason 3", ",", "IAC Router to Reason 4", ",", "IAC Live to Router", ",", "IAC Live to Reason", ",", "IAC Stream Deck to Traktor", ",", "IAC Traktor to Stream Deck", ",", "IAC Bome to Reason", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW", ",", "Scarlett 8i6 USB", ",", "from Max 1", ",", "from Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -8247,6 +8246,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "rackConfigRackButton.maxpat",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "rackDevices.js",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
 				"patcherrelativepath" : "../code",
@@ -8380,14 +8386,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "u853012897.js",
+				"name" : "u575002312.js",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "u881012905.js",
+				"name" : "u693002301.js",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"type" : "TEXT",
