@@ -2,7 +2,7 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3837477177,
+	"modificationdate" : 3837660430,
 	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
@@ -52,6 +52,11 @@
 				"local" : 1
 			}
 ,
+			"rackConfigRackButton.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"reasonRack.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -63,11 +68,6 @@
 			}
 ,
 			"simPadController.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"rackConfigRackButton.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -156,6 +156,11 @@
 			}
 ,
 			"rackDevices.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"PerformanceModeUpdater.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 343.0, 87.0, 2872.0, 1319.0 ],
+		"rect" : [ 200.0, 234.0, 1152.0, 1068.0 ],
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
 		"gridsnaponopen" : 2,
@@ -18,6 +18,43 @@
 		"style" : "rnbodefault",
 		"subpatcher_template" : "zapperment_template",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 660.0, 880.0, 152.0, 50.0 ],
+					"presentation_linecount" : 3,
+					"text" : "Max messages for controlling the on screen pads (simPadControl)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 870.0, 880.0, 150.0, 50.0 ],
+					"text" : "Patcher messages to update play button on the screen"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 440.0, 880.0, 150.0, 50.0 ],
+					"text" : "MIDI messages to initialise hardware Launchpad's pads and play button"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "button",
@@ -33,13 +70,13 @@
 				"box" : 				{
 					"annotation" : "",
 					"comment" : "",
-					"hint" : "Patcher messages to initialise simulated Launchpad on the screen",
+					"hint" : "Max messages for controlling the on screen pads (simPadControl)",
 					"id" : "obj-17",
 					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 580.0, 880.0, 30.0, 30.0 ]
+					"patching_rect" : [ 620.0, 880.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -158,26 +195,26 @@
 				"box" : 				{
 					"annotation" : "",
 					"comment" : "",
-					"hint" : "Patcher messages to initialise simulated Launchpad on the screen",
+					"hint" : "Patcher messages to update play button on the screen",
 					"id" : "obj-7",
 					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 640.0, 880.0, 30.0, 30.0 ]
+					"patching_rect" : [ 830.0, 880.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"hint" : "MIDI messages to initialise hardware Launchpad",
+					"hint" : "Patcher messages to update play button on the screen",
 					"id" : "obj-6",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 520.0, 880.0, 30.0, 30.0 ]
+					"patching_rect" : [ 410.0, 880.0, 30.0, 30.0 ]
 				}
 
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 894.0, 87.0, 1652.0, 1319.0 ],
+		"rect" : [ 34.0, 87.0, 2427.0, 1319.0 ],
 		"openinpresentation" : 1,
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
@@ -23,6 +23,73 @@
 		"integercoordinates" : 1,
 		"title" : "age:main",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-147",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2810.0, 230.0, 74.0, 23.0 ],
+					"text" : "print rcvSPC"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.989013433456421, 0.435749292373657, 0.811749815940857, 1.0 ],
+					"id" : "obj-357",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 6970.0, 1670.0, 113.0, 23.0 ],
+					"text" : "send simPadControl"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.000011785851711, 0.501965880393982, 1.0 ],
+					"id" : "obj-358",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 6410.0, 1680.0, 79.0, 23.0 ],
+					"text" : "send midiOut"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-356",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 6430.0, 1160.0, 260.0, 50.0 ],
+					"text" : "update the colours of the pads on the Launchpad and on screen when the rack assignment has changed"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "const PerformanceModeUpdater = require(\"PerformanceModeUpdater\");\r\n\r\nthis.inlets = 1;\r\nthis.outlets = 2;\r\n\r\nconst state = new Dict(\"state\");\r\nconst colours = new Dict(\"colours\");\r\n\r\nconst performanceModeUpdater = new PerformanceModeUpdater({\r\n\tstate,\r\n\tcolours\r\n});\r\n\r\nfunction bang() {\r\n\tperformanceModeUpdater.update(outlet);\r\n}",
+					"filename" : "none",
+					"fontface" : 0,
+					"fontname" : "<Monospaced>",
+					"fontsize" : 10.0,
+					"id" : "obj-92",
+					"maxclass" : "v8.codebox",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 6390.0, 1230.0, 600.0, 360.0 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-86",
 					"linecount" : 4,
@@ -207,9 +274,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "rackConfig.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 1,
+					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
+					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 5480.0, 350.0, 920.0, 760.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 40.0, 40.0, 920.0, 760.0 ],
@@ -295,6 +362,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 
@@ -614,8 +683,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 
@@ -3405,7 +3472,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1238.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "194"
+					"text" : "13"
 				}
 
 			}
@@ -3430,7 +3497,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1270.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1"
+					"text" : "4"
 				}
 
 			}
@@ -3480,7 +3547,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1450.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "370800."
+					"text" : "24780."
 				}
 
 			}
@@ -3605,7 +3672,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1298.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "240."
+					"text" : "300."
 				}
 
 			}
@@ -3630,7 +3697,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3140.0, 240.0, 110.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "1 playing"
+					"text" : "1 stopped"
 				}
 
 			}
@@ -3905,12 +3972,12 @@
 , 			{
 				"box" : 				{
 					"fontface" : 1,
-					"fontsize" : 16.0,
+					"fontsize" : 20.0,
 					"id" : "obj-14",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 4020.0, 630.0, 210.0, 26.0 ],
+					"patching_rect" : [ 4020.0, 630.0, 259.0, 30.0 ],
 					"text" : "ClipStateUpdater"
 				}
 
@@ -4086,12 +4153,12 @@
 , 			{
 				"box" : 				{
 					"fontface" : 1,
-					"fontsize" : 16.0,
+					"fontsize" : 20.0,
 					"id" : "obj-25",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 820.0, 180.0, 150.0, 26.0 ],
+					"patching_rect" : [ 820.0, 180.0, 184.0, 30.0 ],
 					"text" : "Transport",
 					"textjustification" : 1
 				}
@@ -4234,12 +4301,12 @@
 , 			{
 				"box" : 				{
 					"fontface" : 1,
-					"fontsize" : 16.0,
+					"fontsize" : 20.0,
 					"id" : "obj-296",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 240.0, 808.0, 150.0, 26.0 ],
+					"patching_rect" : [ 240.0, 808.0, 150.0, 30.0 ],
 					"text" : "Beat lamps"
 				}
 
@@ -6048,7 +6115,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.579999983310699, 0.119999997317791, 0.129999995231628, 0.899999976158142 ],
+					"bgcolor" : [ 0.0, 0.5, 0.550000011920929, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.357, 0.514, 0.863, 1.0 ],
 					"id" : "obj-163",
@@ -6168,7 +6235,7 @@
 					"bgfillcolor_proportion" : 0.39,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-129",
-					"items" : [ "AU DLS Synth 1", ",", "IAC Router to Reason 1", ",", "IAC Router to Reason 2", ",", "IAC Router to Reason 3", ",", "IAC Router to Reason 4", ",", "IAC Live to Router", ",", "IAC Live to Reason", ",", "IAC Stream Deck to Traktor", ",", "IAC Traktor to Stream Deck", ",", "IAC Bome to Reason", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW", ",", "Scarlett 8i6 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "IAC Router to Reason 1", ",", "IAC Router to Reason 2", ",", "IAC Router to Reason 3", ",", "IAC Router to Reason 4", ",", "IAC Live to Router", ",", "IAC Live to Reason", ",", "IAC Stream Deck to Traktor", ",", "IAC Traktor to Stream Deck", ",", "IAC Bome to Reason", ",", "Scarlett 8i6 USB", ",", "from Max 1", ",", "from Max 2", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -7097,6 +7164,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-147", 0 ],
+					"order" : 2,
+					"source" : [ "obj-241", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-238", 0 ],
 					"order" : 1,
 					"source" : [ "obj-241", 0 ]
@@ -7665,6 +7740,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-92", 0 ],
+					"source" : [ "obj-332", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-341", 0 ],
 					"source" : [ "obj-333", 0 ]
 				}
@@ -7979,6 +8061,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-357", 0 ],
+					"source" : [ "obj-92", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-358", 0 ],
+					"source" : [ "obj-92", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-99", 0 ],
 					"source" : [ "obj-94", 0 ]
 				}
@@ -8121,6 +8217,13 @@
 			}
 , 			{
 				"name" : "PadMidiSender.js",
+				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "PerformanceModeUpdater.js",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
@@ -8386,14 +8489,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "u575002312.js",
+				"name" : "u073018403.js",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "u693002301.js",
+				"name" : "u610018390.js",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"type" : "TEXT",
