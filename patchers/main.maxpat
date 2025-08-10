@@ -362,8 +362,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 
@@ -683,6 +681,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 
@@ -3472,7 +3472,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1238.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "13"
+					"text" : "91"
 				}
 
 			}
@@ -3547,7 +3547,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1450.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "24780."
+					"text" : "174555."
 				}
 
 			}
@@ -3672,7 +3672,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1030.0, 1298.0, 140.0, 23.0 ],
 					"style" : "rnbodefault",
-					"text" : "300."
+					"text" : "315."
 				}
 
 			}
@@ -6115,7 +6115,7 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"bgcolor" : [ 0.0, 0.5, 0.550000011920929, 1.0 ],
+					"bgcolor" : [ 0.579999983310699, 0.119999997317791, 0.129999995231628, 1.0 ],
 					"border" : 1,
 					"bordercolor" : [ 0.357, 0.514, 0.863, 1.0 ],
 					"id" : "obj-163",
@@ -8370,111 +8370,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "reason-rack-10.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-11.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-12.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-13.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-14.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-15.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-16.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-2.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-3.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-4.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-5.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-6.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-7.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-8.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reason-rack-9.maxsnap",
-				"bootpath" : "~/Music/Zapperment/Age",
-				"patcherrelativepath" : "../../../../../Music/Zapperment/Age",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "reasonRack.maxpat",
 				"bootpath" : "~/Documents/Max 9/Projects/Age/patchers",
 				"patcherrelativepath" : ".",
@@ -8489,14 +8384,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "u073018403.js",
+				"name" : "u357008038.js",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "u610018390.js",
+				"name" : "u694007947.js",
 				"bootpath" : "~/Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"patcherrelativepath" : "../../../../../Library/Application Support/Cycling '74/Max 9/Settings/temp64-Max",
 				"type" : "TEXT",
