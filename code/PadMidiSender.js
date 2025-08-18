@@ -20,9 +20,16 @@ module.exports = class PadMidiSender {
 
   send(padId, outlet) {
     const currentState = this.#state.get(`pads::${padId}::state`);
-    const rackId = this.#state.get(`pads::${padId}::clip::rackId`);
-    const colourId = this.#state.get(`racks::${rackId}::colourId`);
-    const lpColourIndex = this.#colours.get(`${colourId}::lp`);
+    const rackId =
+      currentState === clipState.EMPTY
+        ? null
+        : this.#state.get(`pads::${padId}::clip::rackId`);
+    const colourId = rackId
+      ? this.#state.get(`racks::${rackId}::colourId`)
+      : null;
+    const lpColourIndex = colourId
+      ? this.#colours.get(`${colourId}::lp`)
+      : null;
     const launchpadIndex = padIdToLaunchpadIndex(padId);
     post(`Pad MIDI sender state ${currentState}\n`);
     switch (currentState) {

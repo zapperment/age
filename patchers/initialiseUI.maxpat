@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 200.0, 234.0, 1152.0, 1068.0 ],
+		"rect" : [ 343.0, 365.0, 1152.0, 848.0 ],
 		"gridonopen" : 2,
 		"gridsize" : [ 10.0, 10.0 ],
 		"gridsnaponopen" : 2,
@@ -19,13 +19,197 @@
 		"subpatcher_template" : "zapperment_template",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 939.0, 160.0, 160.0, 21.0 ],
+					"text" : "patcher message"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 160.0, 90.0, 21.0 ],
+					"text" : "lavender",
+					"textcolor" : [ 0.800003349781036, 0.400086343288422, 0.999035120010376, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-366",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 939.0, 140.0, 160.0, 21.0 ],
+					"text" : "Sim Pad Control message"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-367",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 140.0, 90.0, 21.0 ],
+					"text" : "carnation",
+					"textcolor" : [ 0.989013433456421, 0.435749292373657, 0.811749815940857, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-364",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 940.0, 120.0, 160.0, 21.0 ],
+					"text" : "MIDI message"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.33 ],
+					"id" : "obj-365",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 120.0, 90.0, 21.0 ],
+					"text" : "midnight",
+					"textcolor" : [ 0.0, 0.000011785851711, 0.501965880393982, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-347",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 940.0, 100.0, 160.0, 21.0 ],
+					"text" : "boolean (1 or 0)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-348",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 100.0, 90.0, 21.0 ],
+					"text" : "teal",
+					"textcolor" : [ 0.064094863831997, 0.501830577850342, 0.501977205276489, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-349",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 940.0, 80.0, 160.0, 21.0 ],
+					"text" : "button's rack ID"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-352",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 80.0, 90.0, 21.0 ],
+					"text" : "spring",
+					"textcolor" : [ 0.131302490830421, 0.99969744682312, 0.023593783378601, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-353",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 940.0, 60.0, 160.0, 21.0 ],
+					"text" : "bang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-355",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 60.0, 90.0, 21.0 ],
+					"text" : "maraschino",
+					"textcolor" : [ 0.986251711845398, 0.00723597407341, 0.02742300927639, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-359",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 940.0, 40.0, 160.0, 21.0 ],
+					"text" : "assigned rack ID"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-360",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 40.0, 90.0, 21.0 ],
+					"text" : "sky",
+					"textcolor" : [ 0.399992018938065, 0.800062239170074, 0.998948574066162, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-361",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 940.0, 20.0, 160.0, 21.0 ],
+					"text" : "pad ID"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-362",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 850.0, 20.0, 90.0, 21.0 ],
+					"text" : "cantaloupe",
+					"textcolor" : [ 0.995808124542236, 0.800123929977417, 0.399986684322357, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-22",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 660.0, 880.0, 152.0, 50.0 ],
-					"presentation_linecount" : 3,
 					"text" : "Max messages for controlling the on screen pads (simPadControl)"
 				}
 
@@ -49,20 +233,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 440.0, 880.0, 150.0, 50.0 ],
+					"patching_rect" : [ 440.0, 880.0, 152.0, 50.0 ],
 					"text" : "MIDI messages to initialise hardware Launchpad's pads and play button"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 300.0, 260.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -82,7 +254,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "const { clipState } = require(\"constants\");\r\nconst padIdToLaunchpadIndex = require(\"padIdToLaunchpadIndex\");\r\n\t\r\nthis.inlets = 1;\r\nthis.outlets = 2;\r\n\r\nconst state = new Dict(\"state\");\r\nconst colours = new Dict(\"colours\");\r\n\r\nfunction bang() {\r\n\tfor (let padId = 1; padId <= 64; padId++) {\r\n\t\tconst padState = state.get(`pads::${padId}::state`);\r\n\t\tconst launchpadIndex = padIdToLaunchpadIndex(padId);\r\n\t\tif (padState === clipState.EMPTY) {\r\n\t\t\toutlet(0, [ 144, launchpadIndex, colours.get(`black::lp`) ]);\r\n\t\t\toutlet(1, [ padId, \"empty\" ]);\r\n\t\t\tcontinue;\r\n\t\t}\r\n\t\tconst rackId = state.get(`pads::${padId}::clip::rackId`);\r\n\t\tconst colourId = state.get(`racks::${rackId}::colourId`);\r\n\t\tconst launchpadColourIndex = colours.get(`${colourId}::lp`);\r\n\t\tconst colourRgb = colours.get(`${colourId}::rgb`);\r\n\t\toutlet(0, [ 144, launchpadIndex, launchpadColourIndex ]);\r\n\t\toutlet(1, [ padId, \"colour\", ...colourRgb]);\r\n\t}\r\n}",
+					"code" : "const PerformanceModeUpdater = require(\"PerformanceModeUpdater\");\r\n\r\nthis.inlets = 1;\r\nthis.outlets = 2;\r\n\r\nconst state = new Dict(\"state\");\r\nconst colours = new Dict(\"colours\");\r\n\r\nconst performanceModeUpdater = new PerformanceModeUpdater({\r\n\tstate,\r\n\tcolours\r\n});\r\n\r\nfunction bang() {\r\n\tperformanceModeUpdater.updateAll(outlet);\r\n}\r\n",
 					"filename" : "none",
 					"fontface" : 0,
 					"fontname" : "<Monospaced>",
@@ -92,7 +264,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 10.000000298023224, 310.00000923871994, 489.999999701976776, 439.99999076128006 ],
+					"patching_rect" : [ 10.0, 310.0, 560.0, 440.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0
 					}
@@ -338,6 +510,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"color" : [ 0.989013433456421, 0.435749292373657, 0.811749815940857, 1.0 ],
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-11", 1 ]
 				}
@@ -345,6 +518,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.000011785851711, 0.501965880393982, 1.0 ],
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
@@ -352,6 +526,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.000011785851711, 0.501965880393982, 1.0 ],
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
@@ -359,6 +534,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.000011785851711, 0.501965880393982, 1.0 ],
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
@@ -366,6 +542,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.986251711845398, 0.00723597407341, 0.02742300927639, 1.0 ],
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-16", 0 ]
 				}
@@ -373,6 +550,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.986251711845398, 0.00723597407341, 0.02742300927639, 1.0 ],
 					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-16", 1 ]
 				}
@@ -380,6 +558,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.986251711845398, 0.00723597407341, 0.02742300927639, 1.0 ],
 					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-16", 2 ]
 				}
@@ -387,6 +566,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.986251711845398, 0.00723597407341, 0.02742300927639, 1.0 ],
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-16", 3 ]
 				}
@@ -394,15 +574,9 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.064094863831997, 0.501830577850342, 0.501977205276489, 1.0 ],
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -415,6 +589,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.0, 0.000011785851711, 0.501965880393982, 1.0 ],
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
@@ -422,6 +597,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.800003349781036, 0.400086343288422, 0.999035120010376, 1.0 ],
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-8", 1 ]
 				}
