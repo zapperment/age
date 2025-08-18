@@ -1,5 +1,5 @@
 import PerformanceModeUpdater from "./PerformanceModeUpdater";
-import { beforeEach, describe, expect, it, test, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import {
   numberOfPads,
   defaultMidiOutletIndex,
@@ -22,6 +22,7 @@ colours.set(
 colours.set("black::lp", 0);
 colours.set("black::rgb", [0, 0, 0]);
 const outlet = vi.fn();
+global.post = vi.fn();
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -38,15 +39,15 @@ describe("The PerformanceModeUpdater", () => {
         performanceModeUpdater.update(outlet);
         expect(outlet.mock.calls[0][0]).toBe(defaultMidiOutletIndex);
       });
-      it("should be a note onmessage to MIDI channel 1", () => {
+      it("should be a control change message to MIDI channel 3 (pulsing colour)", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[0][1][0]).toBe(144);
+        expect(outlet.mock.calls[0][1][0]).toBe(178);
       });
-      it("should be a note on message for note number 81 (controls the upper left pad on the Launchpad)", () => {
+      it("should be a control change message for controller number 81 (controls the upper left pad on the Launchpad)", () => {
         performanceModeUpdater.update(outlet);
         expect(outlet.mock.calls[0][1][1]).toBe(81);
       });
-      it("should be a note on message with velocity 7 (the launchpad colour index for colour “Burgundy”)", () => {
+      it("should be a control change message with value 7 (the launchpad colour index for colour “Burgundy”)", () => {
         performanceModeUpdater.update(outlet);
         expect(outlet.mock.calls[0][1][2]).toBe(7);
       });
@@ -72,35 +73,49 @@ describe("The PerformanceModeUpdater", () => {
       });
     });
     describe("the third message emitted", () => {
-      it("should be sent to the default MIDI outlet", () => {
+      it("should be sent to the default Sim Pad Control outlet", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[2][0]).toBe(defaultMidiOutletIndex);
+        expect(outlet.mock.calls[2][0]).toBe(defaultSimPadControlOutletIndex);
       });
-      it("should be a note on message to MIDI channel 1", () => {
+      it("should be a Sim Pad Control message for pad 1 (the upper left pad on the screen)", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[2][1][0]).toBe(144);
+        expect(outlet.mock.calls[2][1][0]).toBe(1);
       });
-      it("should be a note on message for note number 82 (controls the second pad from the left in the top row on the Launchpad)", () => {
+      it("should be a Sim Pad Control message for setting the pad's state to “playing”", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[2][1][1]).toBe(82);
-      });
-      it("should be a note on message with velocity 0 (the launchpad colour index for colour “Black”)", () => {
-        performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[2][1][2]).toBe(0);
+        expect(outlet.mock.calls[2][1][1]).toBe("playing");
       });
     });
     describe("the fourth message emitted", () => {
+      it("should be sent to the default MIDI outlet", () => {
+        performanceModeUpdater.update(outlet);
+        expect(outlet.mock.calls[3][0]).toBe(defaultMidiOutletIndex);
+      });
+      it("should be a control change message to MIDI channel 1 (static colour)", () => {
+        performanceModeUpdater.update(outlet);
+        expect(outlet.mock.calls[3][1][0]).toBe(176);
+      });
+      it("should be a control change message for controller number 82 (controls the second pad from the left in the top row on the Launchpad)", () => {
+        performanceModeUpdater.update(outlet);
+        expect(outlet.mock.calls[3][1][1]).toBe(82);
+      });
+      it("should be a control change message with value 0 (the launchpad colour index for colour “Black”)", () => {
+        performanceModeUpdater.update(outlet);
+        expect(outlet.mock.calls[3][1][2]).toBe(0);
+      });
+    });
+    describe("the fifth message emitted", () => {
       it("should be sent to the default Sim Pad Control outlet", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[3][0]).toBe(defaultSimPadControlOutletIndex);
+        expect(outlet.mock.calls[4][0]).toBe(defaultSimPadControlOutletIndex);
       });
       it("should be a Sim Pad Control message for pad 2 (the second pad from the left in the top row on the screen)", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[3][1][0]).toBe(2);
+        expect(outlet.mock.calls[4][1][0]).toBe(2);
       });
       it("should be a SPC empty message", () => {
         performanceModeUpdater.update(outlet);
-        expect(outlet.mock.calls[3][1][1]).toBe("empty");
+        expect(outlet.mock.calls[4][1][1]).toBe("empty");
       });
     });
   });

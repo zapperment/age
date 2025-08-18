@@ -1,43 +1,49 @@
 const {
-  clipState,
   numberOfPads,
   defaultMidiOutletIndex,
   defaultSimPadControlOutletIndex,
 } = require("./constants");
-const padIdToLaunchpadIndex = require("./padIdToLaunchpadIndex");
+const SimPadControlSender = require("./SimPadControlSender");
+const PadMidiSender = require("./PadMidiSender");
 
 module.exports = class PerformanceModeUpdater {
-  #state;
-  #colours;
+  #numberOfPads;
+  #simPadControlSender;
+  #padMidiSender;
 
-  constructor({ state, colours }) {
-    this.#state = state;
-    this.#colours = colours;
+  constructor({
+    state,
+    colours,
+    numberOfPads: customNumberOfPads,
+    midiOutletIndex: customMidiOutletIndex,
+    simPadControlOutletIndex: customSimPadControlOutletIndex,
+  }) {
+    const midiOutletIndex =
+      customMidiOutletIndex === undefined
+        ? defaultMidiOutletIndex
+        : customMidiOutletIndex;
+    const simPadControlOutletIndex =
+      customSimPadControlOutletIndex === undefined
+        ? defaultSimPadControlOutletIndex
+        : customSimPadControlOutletIndex;
+    this.#numberOfPads =
+      customNumberOfPads === undefined ? numberOfPads : customNumberOfPads;
+    this.#simPadControlSender = new SimPadControlSender({
+      state,
+      colours,
+      outletIndex: simPadControlOutletIndex,
+    });
+    this.#padMidiSender = new PadMidiSender({
+      state,
+      colours,
+      outletIndex: midiOutletIndex,
+    });
   }
 
   update(outlet) {
-    for (let padId = 1; padId <= numberOfPads; padId++) {
-      const padState = this.#state.get(`pads::${padId}::state`);
-      const launchpadIndex = padIdToLaunchpadIndex(padId);
-      if (padState === clipState.EMPTY) {
-        outlet(defaultMidiOutletIndex, [
-          144,
-          launchpadIndex,
-          this.#colours.get(`black::lp`),
-        ]);
-        outlet(defaultSimPadControlOutletIndex, [padId, "empty"]);
-        continue;
-      }
-      const rackId = this.#state.get(`pads::${padId}::clip::rackId`);
-      const colourId = this.#state.get(`racks::${rackId}::colourId`);
-      const launchpadColourIndex = this.#colours.get(`${colourId}::lp`);
-      const colourRgb = this.#colours.get(`${colourId}::rgb`);
-      outlet(defaultMidiOutletIndex, [
-        144,
-        launchpadIndex,
-        launchpadColourIndex,
-      ]);
-      outlet(defaultSimPadControlOutletIndex, [padId, "colour", ...colourRgb]);
+    for (let padId = 1; padId <= this.#numberOfPads; padId++) {
+      this.#padMidiSender.send(padId, outlet);
+      this.#simPadControlSender.send(padId, outlet);
     }
   }
 };

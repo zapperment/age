@@ -55,6 +55,13 @@ module.exports = class PadMidiSender {
           lpColourIndex,
         ]);
         break;
+      case clipState.EMPTY:
+        outlet(this.#outletIndex, [
+          padChannel.STATIC + padCC,
+          launchpadIndex,
+          this.#colours.get("black::lp"),
+        ]);
+        break;
     }
   }
 };
