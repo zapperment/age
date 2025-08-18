@@ -40,14 +40,14 @@ module.exports = class PerformanceModeUpdater {
     });
   }
 
-  update(padId, outlet) {
+  update(outlet, padId) {
     this.#padMidiSender.send(padId, outlet);
     this.#simPadControlSender.send(padId, outlet);
   }
 
   updateAll(outlet) {
     for (let padId = 1; padId <= this.#numberOfPads; padId++) {
-      this.update(padId, outlet);
+      this.update(outlet, padId);
     }
   }
 };
