@@ -1,4 +1,4 @@
-const { defaultSimPadControlOutletIndex } = require("./constants");
+const { defaultSimPadControlOutletIndex, clipState } = require("./constants");
 
 module.exports = class SimPadControlSender {
   #state;
@@ -13,10 +13,12 @@ module.exports = class SimPadControlSender {
 
   send(padId, outlet) {
     const state = this.#state.get(`pads::${padId}::state`);
-    const rackId = this.#state.get(`pads::${padId}::clip::rackId`);
-    const colourId = this.#state.get(`racks::${rackId}::colourId`);
-    const rgb = this.#colours.get(`${colourId}::rgb`);
-    outlet(this.#outletIndex, [padId, "colour", ...rgb]);
+    if (state !== clipState.EMPTY) {
+      const rackId = this.#state.get(`pads::${padId}::clip::rackId`);
+      const colourId = this.#state.get(`racks::${rackId}::colourId`);
+      const rgb = this.#colours.get(`${colourId}::rgb`);
+      outlet(this.#outletIndex, [padId, "colour", ...rgb]);
+    }
     outlet(this.#outletIndex, [padId, state]);
   }
 };

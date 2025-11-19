@@ -2,8 +2,8 @@
 	"name" : "age",
 	"version" : 1,
 	"creationdate" : 3832120215,
-	"modificationdate" : 3836830145,
-	"viewrect" : [ 860.0, 187.0, 1720.0, 1119.0 ],
+	"modificationdate" : 3837775182,
+	"viewrect" : [ 2940.0, 1087.0, 500.0, 319.0 ],
 	"autoorganize" : 0,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -32,6 +32,31 @@
 				"local" : 1
 			}
 ,
+			"isMode.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"isShifted.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rackButton.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rackConfig.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"rackConfigRackButton.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"reasonRack.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -43,6 +68,11 @@
 			}
 ,
 			"simPadController.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"debugState.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -71,6 +101,11 @@
 			}
 ,
 			"PadMidiSender.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"PerformanceModeUpdater.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -105,12 +140,22 @@
 				"local" : 1
 			}
 ,
+			"padIdToLaunchpadIndex.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"isCombinatorDevice.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
 			"isPlaySwitch.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"launchpadIndexToPadId.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
@@ -124,47 +169,12 @@
 				"kind" : "javascript",
 				"local" : 1
 			}
-,
-			"colours.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"padIdToLaunchpadIndex.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
-,
-			"launchpadIndexToPadId.js" : 			{
-				"kind" : "javascript",
-				"local" : 1
-			}
 
 		}
 ,
 		"data" : 		{
 			"reason-rack-1.maxsnap" : 			{
 				"kind" : "maxsnapshot",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/.Trash/Age 13.02.32",
-					"projectrelativepath" : "../../../../.Trash/Age 13.02.32"
-				}
-
-			}
-,
-			"ctqBeats.json" : 			{
-				"kind" : "json",
-				"local" : 1
-			}
-,
-			"ctqLabel.json" : 			{
-				"kind" : "json",
-				"local" : 1
-			}
-,
-			"colours.json" : 			{
-				"kind" : "json",
 				"local" : 1
 			}
 ,
@@ -240,6 +250,21 @@
 ,
 			"reason-rack-9.maxsnap" : 			{
 				"kind" : "maxsnapshot",
+				"local" : 1
+			}
+,
+			"ctqBeats.json" : 			{
+				"kind" : "json",
+				"local" : 1
+			}
+,
+			"ctqLabel.json" : 			{
+				"kind" : "json",
+				"local" : 1
+			}
+,
+			"colours.json" : 			{
+				"kind" : "json",
 				"local" : 1
 			}
 ,

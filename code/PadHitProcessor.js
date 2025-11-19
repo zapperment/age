@@ -47,6 +47,7 @@ module.exports = class PadHitProcessor {
         break;
       default:
     }
+    post(`state ${currentState} -> ${nextState}\n`);
     if (nextState !== currentState) {
       this.#state.replace(`pads::${padId}::state`, nextState);
       this.#padMidiSender.send(padId, outlet);
